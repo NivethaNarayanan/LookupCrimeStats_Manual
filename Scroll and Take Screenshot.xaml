@@ -1,0 +1,183 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Scroll_and_Take_Screenshot" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,1399" sap2010:WorkflowViewState.IdRef="Scroll_and_Take_Screenshot_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:ScrollActivity;assembly=ScrollActivity" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>ScrollActivity</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.Activities.Extensions.Statements</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>ScrollActivity</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Scroll_and_Take_Screenshot" sap:VirtualizedContainerService.HintSize="572,1294" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:Image" Name="Image" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: CityProtect" sap:VirtualizedContainerService.HintSize="530,1202" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f887580e-7485-49f2-adc8-14bea85a636b" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,986" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="Count" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Step 4 Incident Scroll" sap:VirtualizedContainerService.HintSize="454,892" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:UiElement" Name="Screenshot" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'DIV'" sap:VirtualizedContainerService.HintSize="412,51" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition OffsetX="55" OffsetY="78" Position="BottomLeft" />
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="2" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIoAAAAnCAYAAADQBdBUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAXTSURBVHhe7Zk9a+NKFIbv3/CvmNKkCQQ2ncqYFDG3iCGwhoAxtwjeygQWkyKYhWBSrLlFMIEFBwLeIniLIDcBFwsOLNjFoi0CKrYwpBCkeO+RPbJmpJE88TqJkzsPnEKaD2nOvHN0ZvQXDAYNjFAMWhihGLQwQjFoYYRi0MIIxaCFEYpBCyMUgxZGKAYtjFAMWiwkFPeigEwmM7W9Nlx+fzXoox68G1m9z28/hrs2Cn/axxvDCEWFEUoMIxQVr0IoHuxD/o7PMAdvUChL4FUIZYA6e745MEJR8RqE8kt4RyOUF+IVCMW7rj7rHDyJUFTlbq+B8tY62OQ+w/pWGfWvQ4ynTZJx+2gfl5HbYLzPeW31cpTxjw7qpRzWefhmGzmUjzsY3lOhrlA8F/Z5VRgX7+ewBTtx5hTvNx6ifViAtcbvr1koHDQVfcht1VanWnHcXgtVGu/sGRM/FlD53IUzdxKeQyi7NTQ+WOF1xNh+C47HG0p4GJ6XkVW0CYxtkVNig5wnFA+D0/xsYmNmVdC9mS8U77aJwszpKsuifOnw2iLy+1VOGsgHuUbMLNR64gAXEYqDTimrqCcYy6Nxq5yEGU8vFG5sI4/KUQONowryEQdbpwPeMsS5KEqTmbXKqJJTG4dlYVWQ0fPl6UgXitevY1Mo9yc0f0Bipr6rJWsqTMakZ8eEQvlBUZzcNT62E4ouljgpFrWNToBqsrOwSlVM3uF9GJ0mxki4v3lTiqHDng2brPmPUGe7hg6/b/fkSOuc58N6fhT5u4Kayo/vSGApWnkGoTAUv0RW1oOD1l5QTsbqlMML/O6iMpsIRfv7IZqz9oxWnTjCNKHQc3fCsoxVgz2bhCneiCKF0D7ex5hWaFhmfbRjn0BJ5DsUMfn9KRGhWPGoOO7VJDEXL+Pfsf6x0IdiDqbQeLeDepuo3USUEPFj/Tu/r+DphbIddRTnphbWyRTQvuP3CWkVlDrqXOS2ETrz0KYPSkCKUKTcIyqwkMHJ5qx9rI+fLeSDMkZCU3YhimmTwjq/PUF+v+q1qgMH7d2wTuY4GtJ0hSI+q0ZXcby7AY9ENgZ3an/4PFsyG0Pc3klCcdHZD+4nOdLHw3g85ibWSRGKJE614yZ8ryd+etzLYtjHUWIPcL6EPihIETHl/QT6R2GdxYXioi1EjPwnG46frC/AywlFWt2iUISDpNhq1CF5IqT32o3mNgIpux5pgnRNmmhNoYjPWVgo05zMCupxm+7Mmmh/G2gLZwWFIjpS/iTpoSmUFOe+JaH4eKM2qjtJOx9KcN83MVB+30NWXChPGFHeNeQEWkRXKDsV+DuVuXa1wKdniUKZce9g0OugRTvPgrQ7I6OkepCcoqyiUMTvagaVq2Spe4/NUSgMB/czGdp2JnWdkqM4Z7mwj4OuOtFO5QWFEsVz0DkIE/c0X6+gUChLORV2HUntxV2Pbmh3OygKZeWvasek7nrE57Iq7IRv/LjfwiyifHuZiOJd15Dbzk2s8G9C/BQXj+I5ASspFLmMoXg2FLa/BO3/W/vhkb7+OYp8BpJhRbR/8aIAfpjGWNB/tA/5LMb62IX7wIsCpAM5Fmm/HKFoLSbRjzTW1o/owpieUgf9bCoOPgNWUyhE9GSWbRSVJ7Ns/3Ens35EkHcBqpPZGlpn4RhifcROZi3aRfjRo4bKHu+DG9vvRMa/HKGMrypheYaef9JGd3IeMoA7WzckhE/i7xPhZDaWp1ip+eDKCmUyyM+F+f96YqF//kQ45OToljE0fuwunLmo+vBGLZRT//VQtPnQgRONNksSinx6LVrUlw66Kf/appb0XypkhYXCif09zsLao93GH/49hmujJUYnto5cqY7OiC9HIRdJ7OPBRf+ijvJ2GEX8Mwr/z293lJQYLkkoPjSG5oHw15ksa1XRVTh8POpO6oZ+9Ov6f8zb6CsnSGYhoRj+fxihGLQwQjFoYYRi0MIIxaCFEYpBCyMUgxZGKAYNgP8AAqsR5spEga4AAAAASUVORK5CYII=" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65245971-379c-45ec-b3f9-69ec053f37cc" Selector="&lt;html app='msedge.exe' title='CityProtect' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:ClickImage.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ClickImage>
+              <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="412,707" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                <ui:InterruptibleDoWhile.Body>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,542" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <s:ScrollActivity DisplayName="Scroll activity" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="ScrollActivity_1" amount="800" up="False" />
+                    <uix:NTakeScreenshot DisplayName="Take Screenshot 'Proactive Policing200'" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[Image]" OutUiElement="[Screenshot]" ScopeIdentifier="f887580e-7485-49f2-adc8-14bea85a636b" Version="V1">
+                      <uix:NTakeScreenshot.Target>
+                        <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/incidents?toDate=2022-04-26T23:59:59.999Z&amp;fromDate=2022-04-23T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=16&amp;latitude=29.653443561156422&amp;longitude=-82.3217909067445&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom&amp;id=62689073ef65528ae0ab6271" DesignTimeRectangle="8, 275, 350, 365" FriendlyName="'Proactive Policing200'" FullSelectorArgument="&lt;webctrl tag='CDK-VIRTUAL-SCROLL-VIEWPORT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='CDK-VIRTUAL-SCROLL-VIEWPORT' type='' aaname='' check:text='*' /&gt;" Guid="1bd81c04-16e1-4f75-8c5d-3ed1c61b8862" InformativeScreenshot="c69942ac75c062377786fbf2e585ed77.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector" />
+                      </uix:NTakeScreenshot.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTakeScreenshot>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Count+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ui:InterruptibleDoWhile.Body>
+                <ui:InterruptibleDoWhile.Condition>
+                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Count&lt;=3" />
+                </ui:InterruptibleDoWhile.Condition>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InterruptibleDoWhile>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1296, 648" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAInSURBVDhPhZNBTxNBGIb3oInRH6CWdjrdhRqqLSoBIV5UImqCRNoiKUYqF/SGtUSNws0iBxNKjHBp/AOGIqA3yy9oz3DAcwMeBNOktgdfv+9jdy2kiZM8mZ1v3vfd2dkZw2mmXxum0qcsvx4mvhI/iD82O5bSeeoHSXeCettFrbXFL2YSaJr4SPwylR/UH8Ku7REfCA9hKC8FkfHArPQ3FjJXe3oRCp5zjeH2EHq7rzghzArpz1AvASfpIWdPIGhaWMgu4E7/LQR8CtrrQzwaw9zbOQr4tyLyzZtefdygQZzY5yK/oaerG5ubW3j5/IWYGTaXSiVcDEcaV7FLIX0c8NkuiHh8LIl6vY78ch5tARPtbUFsFDZQqVQQvTckGkdP5Dhg1ylw+tLiIrhtb3+X1fRdu45yuSy12czs0YAtDuDfJGZeYrFYxO9aTd44nnyE1ORTVKtV1Gp1FAoFd3Nt9twATo4NRbG6uoYHiVFk3mSQnc/SipYw/eo1kg/HsL62jts3+2VzGwN2eMArSE2mMDhwF+qsR75/ZnoGU+kpmVOeFiTuj+DJxOPGAPmEFRZEQueRfpY+9P95D7oud8oz03EhLIG8sXaAbGKcJvdZPByLi9CedI3OmBkdSeBSpIPrfLxvHBwkpXOtOgCmUdwMV6f0OzpIx5oe5f/Am75MnCaaXyaimZH5Sbr3hNwDiy+T045c5y9E43UuE5/IOGD56Dr7HKNh/AWWHm54+fTIqgAAAABJRU5ErkJggg==" InformativeScreenshot="e07596993ff0631ed22286658dbe05e9.png" Selector="&lt;html app='msedge.exe' url='www.crimereports.com' /&gt;" Url="www.crimereports.com" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
