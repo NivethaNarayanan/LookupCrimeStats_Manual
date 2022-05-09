@@ -1,0 +1,713 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="URL2" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,2489" sap2010:WorkflowViewState.IdRef="URL2_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="88">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="URL2" sap:VirtualizedContainerService.HintSize="594,2384" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://communitycrimemap.com/" Name="URL2" />
+      <Variable x:TypeArguments="x:String" Default="3469 Bayou Crossing Ln.,Shrevport" Name="Address" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="s:String[]" Name="FileDirectory" />
+      <Variable x:TypeArguments="x:String" Default="test" Name="MailSubject" />
+      <Variable x:TypeArguments="x:String" Default="Testing url 2" Name="MailBody" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;anil.devarasetti@greyco.com&quot;}]" Name="ToMail" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;n.lakshminarayanan@greyco.com&quot;}]" Name="FromMail" />
+      <Variable x:TypeArguments="mg:DriveItem" Name="OffendersData" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\N.Lakshminarayanan\Documents\UiPath\Project1_RoboticEnterpriseFramework\Data\Output" Name="OffendersDoc" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: LexisNexis® Community Crime Map" sap:VirtualizedContainerService.HintSize="552,2292" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,2036" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Step.1 checking for Pop ups" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Continue'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="860, 530, 73, 20" FriendlyName="'Continue'" FuzzySelectorArgument="&lt;webctrl id='*' tag='TABLE' /&gt;&lt;webctrl type='' aaname='continue' tag='TD' check:text='Continue' /&gt;" Guid="a835f868-2205-4c33-93a7-2dbe675c3025" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVFhH7Zg7igJBEIa9k4cQvIAGnsBAM8VQU72AXkBDPYE6gYlioJj4BI008gWGvXwN1bSDDeO4rLD0wMd0/V1d3fNPrQuTCIJA+ct94U+CwePx8Djg0ibd73ePA2PS7XbzOPAmRcCbFAFj0vV6jc18PlfpdFolk0lNp9N5mRcFauXzeXU4HHSdRqPxMu8v+dgk/j1iEA9HfDqdVLlcjm0U9XK5nDbp1fw3+Ngk3nTYEB4wbBodJmaKxlrpPsxhHQYRS13u6HRXrVZ7qiP5rGUvu/PsWvZLjMNHJoUP+QoOLQeXLlmv18YkdB6OGPPsTrJNQpOXITVdJslLEJ271Cd+F2PS5XJ5m+PxqEqlkhoOh5Hm9/u97ojxeKz1drutdeaJyWfMg5PLfL1e12M0qRNVly6VbprNZjrvXT4yCTiUPKzAYTBjtVp9zST2iWtKGGPScrmMRbfbValUSvX7fR3zt18oFFSz2dRxtVrVSG4mk1Gj0egpB52YtZIzmUz0PGsZozFHvuj2XjK29fC+1CF+F2MSvxNx6fV6T63darXM3GKxUMViUeuYORgMjCZ5rCdGZ548fqSZ5z6dTlU2m9V55IsuY6ldqVSMLmvsfdHj8Csm/XeMSZvNxuPAmLTdbj0OjEm73c7jQJvEh6Xz+exxgD/68639Jc7zTBAE6gc8qqcekpDB6wAAAABJRU5ErkJggg==" InformativeScreenshot="3aff51cc2f23735ba5d2af2ec7248a16.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="862, 532, 69, 16" FriendlyName="'Continue'" FuzzyAccuracy="0.99" FuzzySelectorArgument="&lt;webctrl id='ext-comp-1056' tag='TABLE' /&gt;&lt;webctrl type='' aaname='' tag='TD' check:text='Continue' /&gt;" Guid="6dff3366-22e1-4279-b4af-d3f141bb82e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVFhH7Zg7igJBEIa9k4cQvIAGnsBAM8VQU72AXkBDPYE6gYlioJj4BI008gWGvXwN1bSDDeO4rLD0wMd0/V1d3fNPrQuTCIJA+ct94U+CwePx8Djg0ibd73ePA2PS7XbzOPAmRcCbFAFj0vV6jc18PlfpdFolk0lNp9N5mRcFauXzeXU4HHSdRqPxMu8v+dgk/j1iEA9HfDqdVLlcjm0U9XK5nDbp1fw3+Ngk3nTYEB4wbBodJmaKxlrpPsxhHQYRS13u6HRXrVZ7qiP5rGUvu/PsWvZLjMNHJoUP+QoOLQeXLlmv18YkdB6OGPPsTrJNQpOXITVdJslLEJ271Cd+F2PS5XJ5m+PxqEqlkhoOh5Hm9/u97ojxeKz1drutdeaJyWfMg5PLfL1e12M0qRNVly6VbprNZjrvXT4yCTiUPKzAYTBjtVp9zST2iWtKGGPScrmMRbfbValUSvX7fR3zt18oFFSz2dRxtVrVSG4mk1Gj0egpB52YtZIzmUz0PGsZozFHvuj2XjK29fC+1CF+F2MSvxNx6fV6T63darXM3GKxUMViUeuYORgMjCZ5rCdGZ548fqSZ5z6dTlU2m9V55IsuY6ldqVSMLmvsfdHj8Csm/XeMSZvNxuPAmLTdbj0OjEm73c7jQJvEh6Xz+exxgD/68639Jc7zTBAE6gc8qqcekpDB6wAAAABJRU5ErkJggg==" InformativeScreenshot="ed7a23fa4460b63cb92d99353f5ec9e4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Continue'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="208,51" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="737, 407, 69, 16" FriendlyName="'Continue'" FuzzySelectorArgument="&lt;webctrl id='*' tag='TABLE' /&gt;&lt;webctrl type='' aaname='continue' tag='TD' check:text='Continue' /&gt;" Guid="efd07339-7a62-4b53-83e0-058755285ee4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVFhH7Zg7igJBEIa9k4cQvIAGnsBAM8VQU72AXkBDPYE6gYlioJj4BI008gWGvXwN1bSDDeO4rLD0wMd0/V1d3fNPrQuTCIJA+ct94U+CwePx8Djg0ibd73ePA2PS7XbzOPAmRcCbFAFj0vV6jc18PlfpdFolk0lNp9N5mRcFauXzeXU4HHSdRqPxMu8v+dgk/j1iEA9HfDqdVLlcjm0U9XK5nDbp1fw3+Ngk3nTYEB4wbBodJmaKxlrpPsxhHQYRS13u6HRXrVZ7qiP5rGUvu/PsWvZLjMNHJoUP+QoOLQeXLlmv18YkdB6OGPPsTrJNQpOXITVdJslLEJ271Cd+F2PS5XJ5m+PxqEqlkhoOh5Hm9/u97ojxeKz1drutdeaJyWfMg5PLfL1e12M0qRNVly6VbprNZjrvXT4yCTiUPKzAYTBjtVp9zST2iWtKGGPScrmMRbfbValUSvX7fR3zt18oFFSz2dRxtVrVSG4mk1Gj0egpB52YtZIzmUz0PGsZozFHvuj2XjK29fC+1CF+F2MSvxNx6fV6T63darXM3GKxUMViUeuYORgMjCZ5rCdGZ548fqSZ5z6dTlU2m9V55IsuY6ldqVSMLmvsfdHj8Csm/XeMSZvNxuPAmLTdbj0OjEm73c7jQJvEh6Xz+exxgD/68639Jc7zTBAE6gc8qqcekpDB6wAAAABJRU5ErkJggg==" InformativeScreenshot="e6dbd8e94d4e771778792d094c0c9d22.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="737, 407, 69, 16" FriendlyName="'Continue'" FullSelectorArgument="&lt;webctrl id='ext-comp-1053' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='ext-comp-1053' tag='TABLE' /&gt;&lt;webctrl type='' aaname='' tag='TD' check:text='Continue' /&gt;" Guid="3baf381b-094e-4b73-b1ec-6df409cb0c0e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIASURBVFhH7Zg7igJBEIa9k4cQvIAGnsBAM8VQU72AXkBDPYE6gYlioJj4BI008gWGvXwN1bSDDeO4rLD0wMd0/V1d3fNPrQuTCIJA+ct94U+CwePx8Djg0ibd73ePA2PS7XbzOPAmRcCbFAFj0vV6jc18PlfpdFolk0lNp9N5mRcFauXzeXU4HHSdRqPxMu8v+dgk/j1iEA9HfDqdVLlcjm0U9XK5nDbp1fw3+Ngk3nTYEB4wbBodJmaKxlrpPsxhHQYRS13u6HRXrVZ7qiP5rGUvu/PsWvZLjMNHJoUP+QoOLQeXLlmv18YkdB6OGPPsTrJNQpOXITVdJslLEJ271Cd+F2PS5XJ5m+PxqEqlkhoOh5Hm9/u97ojxeKz1drutdeaJyWfMg5PLfL1e12M0qRNVly6VbprNZjrvXT4yCTiUPKzAYTBjtVp9zST2iWtKGGPScrmMRbfbValUSvX7fR3zt18oFFSz2dRxtVrVSG4mk1Gj0egpB52YtZIzmUz0PGsZozFHvuj2XjK29fC+1CF+F2MSvxNx6fV6T63darXM3GKxUMViUeuYORgMjCZ5rCdGZ548fqSZ5z6dTlU2m9V55IsuY6ldqVSMLmvsfdHj8Csm/XeMSZvNxuPAmLTdbj0OjEm73c7jQJvEh6Xz+exxgD/68639Jc7zTBAE6gc8qqcekpDB6wAAAABJRU5ErkJggg==" InformativeScreenshot="11c09c145a94babbebfe5314a10173b8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <Delay DisplayName="Delay 2s" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            </Sequence>
+            <Sequence DisplayName="Step.2 Enter the address" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[Address]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="52, 249, 179, 17" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' aaname='' /&gt;" Guid="5553f998-c93d-4eac-a94c-857abcfc8c9d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALcAAAAVCAYAAAAEun96AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dLBCYAwAARBq077ET+SiA1kmYF73XevCVHiJmuLe4xhdvRWb9zfA060dixuUsRNlrjJEjdZ4iZL3GSJmyxxkyVussRNlrjJEjdZ4iZL3GT9xv14DrOTt9rihhJxEzXnDfAFasy9qSB4AAAAAElFTkSuQmCC" InformativeScreenshot="0ac625830856f3fbd534fa3be372e967.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Go to Address'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="154, 289, 73, 17" ElementType="Button" FriendlyName="'Go to Address'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Go to Address' check:text='Go to Address' /&gt;" Guid="df95f2e0-854e-404e-a9bf-01870e85ba1a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAVCAYAAAAD1GMqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHpSURBVFhH7ZhBjsMgDEU5Xw7UJddoF6y67gk4SW7RI3hig8EGQ9JqRpoFlr40AduYh4mmcbDsY1vQvjAF7fl8wuPxgNvttpSFPJCLtAINJ16vF7zf76VGyEWCK9Du97sZsJSEfNgKNGxFy3kpCfmwLWgXdQnaHjZwzmV5iGLuijB+C7s5d6az2OidPR89uC3A3o7/gk6hETC5+FGMjzXBFX0PbYewHQc12fw/hBbBuw3C3gcm5U3lLjSL3wNspUtzLmusjeNYH441Gh8EUuLlulhvHWdoCNbHPOcj+eJY8ctjKj7HylvGzTKHhkVPTosSqgVtALrTEujSrZOOwDj0U/FNTbXTMK9YX+Qln+Nvfq3oehiqzJVz0OH2r6PPoPEJ01iz+UO8OD+zuk2rQhC29Z4U4yLG2jA9W7VKaCVG3w5Wmk+dJveA67WHOodmdU8p7o+hNVcQhbm/hVbr6utuhf4KFNVcY06gGaRFcTTH15MSj69nvca66C5/VncACAFzCBjsV7tkfD1lrtGaVf1BYgwf1ik0UiZNJ64W060+Pr3U9uhTuiI/m//C0Hw7XqFQJ5R4cfXa7hxAQ6kcwo/HyH+w72vQlpRMaOu351zmb8/1lWOs4VcONJxY39O0pt/Tll23Be1jA/gBGpvJ/CupaBQAAAAASUVORK5CYII=" InformativeScreenshot="b3f85b265f95dc98ce769dd786d0abcb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="611, 382, 73, 20" FriendlyName="'OK'" FullSelectorArgument="&lt;webctrl id='ext-comp-1057' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='*' tag='TABLE' /&gt;&lt;webctrl type='' aaname='OK' tag='TD' check:text='OK' /&gt;" Guid="1343670d-ba26-4767-807d-c7badfd56ba4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFSSURBVFhH7Zg/yoMwGId7px6i4AGsoGfoqLOu9h466gmqHsBBN/HP4FQnbQXHt7wBX9IPA50SPkjgIcnvzZKHBCWnoihAN3FDPyccbNumEYCNSVrXVSOAJL3fb40ALekHtKQfIEmv10s6dV2DYRhwPp8Z9/v9q2bbNuv3DOuO48A4jpTJQJmkXRB+XnE+TRN4nkei/krCnJcoE2WSjjbNi+HHKgUhSiTtpyaO48McT9cuCVFxxXhI0rIs0ng+n+C6LkRRdJjneQ5VVbHrGIYhW4c51vn1slAiCcHNI3yGYvDkYM+PRVJlQZKappHK4/GAy+UCSZKwOV6v2+0Gvu9T3TRN1h+tlwlJattWOmVZgmVZ9AsQBAHVsiyD6/XK+j1L05SJ4jMZKJX0XyBJXddpBJCkvu81AkjSMAwaAUwSPizN86wRgH7Y8y3/Eqf5pigK+ABqXjLvmJMYnwAAAABJRU5ErkJggg==" InformativeScreenshot="6058a5e33262a9542c318930b5dd5847.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[Address]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="52, 249, 179, 17" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' aaname='' /&gt;" Guid="5553f998-c93d-4eac-a94c-857abcfc8c9d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALcAAAAVCAYAAAAEun96AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVGhD7dLBCYAwAARBq077ET+SiA1kmYF73XevCVHiJmuLe4xhdvRWb9zfA060dixuUsRNlrjJEjdZ4iZL3GSJmyxxkyVussRNlrjJEjdZ4iZL3GT9xv14DrOTt9rihhJxEzXnDfAFasy9qSB4AAAAAElFTkSuQmCC" InformativeScreenshot="0ac625830856f3fbd534fa3be372e967.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Go to Address'" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="154, 289, 73, 17" ElementType="Button" FriendlyName="'Go to Address'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Go to Address' check:text='Go to Address' /&gt;" Guid="df95f2e0-854e-404e-a9bf-01870e85ba1a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAVCAYAAAAD1GMqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHpSURBVFhH7ZhBjsMgDEU5Xw7UJddoF6y67gk4SW7RI3hig8EGQ9JqRpoFlr40AduYh4mmcbDsY1vQvjAF7fl8wuPxgNvttpSFPJCLtAINJ16vF7zf76VGyEWCK9Du97sZsJSEfNgKNGxFy3kpCfmwLWgXdQnaHjZwzmV5iGLuijB+C7s5d6az2OidPR89uC3A3o7/gk6hETC5+FGMjzXBFX0PbYewHQc12fw/hBbBuw3C3gcm5U3lLjSL3wNspUtzLmusjeNYH441Gh8EUuLlulhvHWdoCNbHPOcj+eJY8ctjKj7HylvGzTKHhkVPTosSqgVtALrTEujSrZOOwDj0U/FNTbXTMK9YX+Qln+Nvfq3oehiqzJVz0OH2r6PPoPEJ01iz+UO8OD+zuk2rQhC29Z4U4yLG2jA9W7VKaCVG3w5Wmk+dJveA67WHOodmdU8p7o+hNVcQhbm/hVbr6utuhf4KFNVcY06gGaRFcTTH15MSj69nvca66C5/VncACAFzCBjsV7tkfD1lrtGaVf1BYgwf1ik0UiZNJ64W060+Pr3U9uhTuiI/m//C0Hw7XqFQJ5R4cfXa7hxAQ6kcwo/HyH+w72vQlpRMaOu351zmb8/1lWOs4VcONJxY39O0pt/Tll23Be1jA/gBGpvJ/CupaBQAAAAASUVORK5CYII=" InformativeScreenshot="b3f85b265f95dc98ce769dd786d0abcb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="613, 384, 69, 16" FriendlyName="'OK'" FullSelectorArgument="&lt;webctrl id='ext-comp-1057' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzyAccuracy="0.96" FuzzySelectorArgument="&lt;webctrl id='ext-comp-1057' tag='TABLE' /&gt;&lt;webctrl type='' aaname='' tag='TD' check:text='OK' /&gt;" Guid="0561b53f-6163-486f-b6ce-843f0667f4ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAAUCAYAAADBYxD1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFSSURBVFhH7Zg/yoMwGId7px6i4AGsoGfoqLOu9h466gmqHsBBN/HP4FQnbQXHt7wBX9IPA50SPkjgIcnvzZKHBCWnoihAN3FDPyccbNumEYCNSVrXVSOAJL3fb40ALekHtKQfIEmv10s6dV2DYRhwPp8Z9/v9q2bbNuv3DOuO48A4jpTJQJmkXRB+XnE+TRN4nkei/krCnJcoE2WSjjbNi+HHKgUhSiTtpyaO48McT9cuCVFxxXhI0rIs0ng+n+C6LkRRdJjneQ5VVbHrGIYhW4c51vn1slAiCcHNI3yGYvDkYM+PRVJlQZKappHK4/GAy+UCSZKwOV6v2+0Gvu9T3TRN1h+tlwlJattWOmVZgmVZ9AsQBAHVsiyD6/XK+j1L05SJ4jMZKJX0XyBJXddpBJCkvu81AkjSMAwaAUwSPizN86wRgH7Y8y3/Eqf5pigK+ABqXjLvmJMYnwAAAABJRU5ErkJggg==" InformativeScreenshot="f7c78a4932fbcb01e33628cd302881a2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+            </Sequence>
+            <Sequence DisplayName="Step.3 Radius" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Default="1 mile" Name="Radius" />
+                <Variable x:TypeArguments="x:String" Name="NewRadius" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Off'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NCheck_4">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="22, 398, 13, 13" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='toggle-radius' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='toggle-radius' tag='INPUT' type='checkbox' aaname='' /&gt;" Guid="f9401fc7-39bc-460b-b3ab-255e71f6d0e8" InformativeScreenshot="e99781b20f100e1e62f43365b2eb79b6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="38, 400, 17, 14" ElementType="Text" FriendlyName="'Off'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Off' check:text='Off' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACjSURBVDhP7ZG5DcQgEEXpkLIohQbcA8lKjpxsZieOXMNfYI4dcIZw5idNwPXmAw4P8Eo7zojVOXykfMTFS0TCxmtrPOvMFT3vDzjyuJWyUDarwIiP0DXiM1vicaaR3g4UUsgJPL61DzX5N5WUlFAwUk4VTMuCpl/02vIsu16bStLepDYFYeenJx2SPvKmmSqwP9mnH5EWWKzVPMeodAKvdDbAD/08YqHfvxS7AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Only display'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NCheck_5">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="22, 415, 13, 13" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='radius-display-checkbox' tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='radius-display-checkbox' tag='INPUT' type='checkbox' aaname='' /&gt;" Guid="64936ed5-09a2-4226-950d-53ecff4027db" InformativeScreenshot="8954f7f8497040a9b9d15a4ca53ff799.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="38, 417, 187, 14" ElementType="Text" FriendlyName="'Only display'" FullSelectorArgument="&lt;webctrl id='radius-display-label' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='radius-display-label' tag='LABEL' type='' aaname='Only display &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;events within buffer' check:text='Only display&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;events within buffer' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL8AAAASCAYAAAAKaA82AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN4SURBVGhD7VbtceUgDHwduiyX4gauh/xOFa8MH0ISrIQgPr/nTHJmZ5gEo4+VtJA89omJm2KKf+K2mOKfuC2m+Cdui1b8z21fHo/9oWvZ9qccjfGxr8l+2Y5Z9/CxUt41Rcub9Puynw2ZYx3mfx88t6X2OMC4byfnnGf52Nde0iGe+7aIHjWAxHtFH1b8IvxaGBd6TEBT/O9EFuhF3K34eW4oyp8m/vayvkdrRvxh0YcFeIH4X8RvFv+3cZcH77j4T+K0+OXVtwQPanIMED+L1yQh4F8DSbronyD9ngHibwrtxBaw4HEl8UuMUqT7d4xDSVxcMDQ7RGebA0hjwYdfmU5jCydeXPtXw3F5Sy72WxbKp+d86ZkD+FDssH6E7zHt6yOir+efEpvOfP+YczuPthasPaqhgesdrULVX8CiuU/ubfFBXfAq+ht+T/w3Pa/8GvEXpwL4LgmUpBUK+jtBKAEfOoEbXQnhHuN7O4YMwwy87q34AViH4RYIWZEHAjXgwLoxRBzVqTlrLqfk9tzj+i1U4NlGaozmYWJ54SXYXI5nESbE7dRggD33e88hymEJJl8/i9Fs1P+ZLo8anXz5SxJTEPvroHEQXREGObHx5nJpESUfYexv80oTJUbI2w8BwFysPy0cUI0hnCVe45c5+aFaITU9C+t3KPyFD73IFAM5JWCPopp97sge6+7VYGC0QoDZeQ7DHAlOh8PZOFvEv/3P7wOZgqz4637LP5F7xVi8RvwCPlefsT/Wg999s/WibvQzGlyC8Y+Qe7HuK9lpYNMfj7FwkDuCeaCfBfulf00zV45ZLgHadHpB8Lkj+3eJP8d5UfyGn4ezRRjx9wjaYY7FjyTrjeyLxhPHfST+0ozcYJ/T7mssNxTh7S+q/ebgfWhAUGvhZfhK3CIGstFa/VAtx/5AXS0enmdTq4tthMbI5xC/bz+uwcBoxe09B8PZ50jI560Oiz/OxtsCrPgJEqisA0nZREjiwILGtqjCq4tjoPjrRaKlHAJfaLz6ZH5Y17o1De2LrcJyCGwpB/aLID1Qv3r8hXDQL337DOuPQD1Bbn7f1sp7XkTnSvHjwlYhB12HxZ/QnU1gq2jF/07kRo0G9SpE/NiYk8jNf0Ocid+Di8QvtzUJ81o9vUH8+iJFr9XEf41rX/6JiR+MKf6J22KKf+Km2Pe/aJO9vNMB2pEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NGetText DisplayName="Get Text '1 mile'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="77, 398, 76, 17" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="96107ef8-ef35-4189-9713-7cf56bd79674" InformativeScreenshot="c9bbdb700790eb174cf687ed254e9ea6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[NewRadius]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <If Condition="[Radius=NewRadius]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="NewRadius" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem DisplayName="Select Item '1 mile'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[Radius]">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="9">
+                          <x:String>500 ft</x:String>
+                          <x:String>1000 ft</x:String>
+                          <x:String>0.25 miles</x:String>
+                          <x:String>0.5 miles</x:String>
+                          <x:String>1 mile</x:String>
+                          <x:String>2 miles</x:String>
+                          <x:String>3 miles</x:String>
+                          <x:String>4 miles</x:String>
+                          <x:String>5 miles</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="77, 398, 76, 17" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="73d5b0a8-8b18-4af5-9844-a144e41cb548" InformativeScreenshot="c9bbdb700790eb174cf687ed254e9ea6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                      </uix:NSelectItem.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else part" sap:VirtualizedContainerService.HintSize="454,607" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="Count" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleDoWhile Condition="[Radius.Contains(NewRadius)=True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="412,513" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item '1 mile'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[Radius]">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="9">
+                                <x:String>500 ft</x:String>
+                                <x:String>1000 ft</x:String>
+                                <x:String>0.25 miles</x:String>
+                                <x:String>0.5 miles</x:String>
+                                <x:String>1 mile</x:String>
+                                <x:String>2 miles</x:String>
+                                <x:String>3 miles</x:String>
+                                <x:String>4 miles</x:String>
+                                <x:String>5 miles</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="77, 398, 76, 17" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="73d5b0a8-8b18-4af5-9844-a144e41cb548" InformativeScreenshot="c9bbdb700790eb174cf687ed254e9ea6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                            </uix:NSelectItem.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NSelectItem>
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Count+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                    </ui:InterruptibleDoWhile>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+            <Sequence DisplayName="Step.4 Date Range" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="217, 199, 15, 15" FullSelectorArgument="&lt;webctrl id='ext-gen40' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen40' tag='DIV' type='' aaname=' ' /&gt;" Guid="472cf173-74a5-4db1-ae7d-9b975e77f1f7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVDhPxdE7DsIwEEVRr5wKsRck2A34FxfJJtwOvOKh8SSRHGHESDdF4jkp7OZlkVH9Frve7t3Z3QbDgSNjwQ92FOJocIXVWrvD/Bc7nS+b7zEN9vBe0B4GiNlvGOzRWGH8C9IQ098xDfYMQZDFtiBmMRq7WE+YBvMxCvoGozEWCykJIoZb2lq06duk4WLOwgj2Ds7rfZfeDx0O9GZ3XZomGZXLpciYirwA3ikFscTrzMwAAAAASUVORK5CYII=" InformativeScreenshot="78d0aa34a4223297fc558f50ba8d48c0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="234, 229, 15, 15" FullSelectorArgument="&lt;webctrl id='ext-gen46' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen46' tag='DIV' type='' aaname=' ' /&gt;" Guid="52422306-0646-4305-b212-0a9b3d7c7543" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVDhPxdE7DsIwEEVRr5wKsRck2A34FxfJJtwOvOKh8SSRHGHESDdF4jkp7OZlkVH9Frve7t3Z3QbDgSNjwQ92FOJocIXVWrvD/Bc7nS+b7zEN9vBe0B4GiNlvGOzRWGH8C9IQ098xDfYMQZDFtiBmMRq7WE+YBvMxCvoGozEWCykJIoZb2lq06duk4WLOwgj2Ds7rfZfeDx0O9GZ3XZomGZXLpciYirwA3ikFscTrzMwAAAAASUVORK5CYII=" InformativeScreenshot="a504d5e54f282a2267d62f23a69bfc5c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="212, 275, 17, 22" ElementType="Icon" FullSelectorArgument="&lt;webctrl id='ext-gen97' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen97' tag='IMG' type='' aaname='' /&gt;" Guid="0a34e84f-2bf6-43c1-8276-807cc10825c6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAaCAYAAABYQRdDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVEhL7ZFNCsIwEEZzJlHv4c99PIB6FC8jKHTjpqggLtSS1rRpx3yRYDu2KrZd6Qevw0yGR0gFtZB2pJOFR3XhERt/Zw8SnX0NjzgFgZWuDvQVOi2RBlLWkgIeIaOoeWmkVPNSlSTNS7VOn6RSpRSbv4q62oZ2tja1MM/t84g0ywrSc6ipP55TZzCl7mhGoRF4+6ut6DHHOfYqpfjkpUv/am/iBKi4Xb7HOfY+ljrOMqbu8C5yoMec7/JUSsElfIhR0Zft8byUAoh65g2rhIDnrRQcL6p07uD5SPoOnr/0p6UQ1oXH3rTptCAlugEGueQjJyah0QAAAABJRU5ErkJggg==" InformativeScreenshot="434a7a85117f9db04f2b92e254423715.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click '6 months'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="21, 458, 205, 20" ElementType="Text" FriendlyName="'6 months'" FullSelectorArgument="&lt;webctrl aaname='6 months' parentid='ext-gen233' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='6 months' parentid='ext-gen233' tag='DIV' type='' check:text='6 months' /&gt;" Guid="5dcfdc09-0645-4d41-b07f-8377ac375289" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANEAAAAYCAYAAABk3RiTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIkSURBVHhe7dtNboJAGMbx4YacqpN20cQTdNEmXKAVNXFpWDU06cIjeIzpPO8MMCKDdkBtk+efsAD5cPH+Msaoel8uzcvrm2GM/S642W63Rn2UJRExllCLaElEjCUFN/v93qiSiBhLCm6eFwuLaLUiIsYSghv4UeV6TUSMJSSIrB+1IiLGkoIb+FHrzebfIKp0ZjJd+T3G7hvcwI96eHyKIjoUuckyO7h2u8fsAk1eHPweEbG/FdzAj9rtdoOIBFBemG6Ebx8Rsb8c3MBPBFFldJabYH6jyaBrbXK/YmHouxVM2zt1CYL+ynYo7LW50bq36lW63ceG+zpE2r43fzxAHq6a2YXvnbEpjSOSwW4GcnwoZbCbYfaD71aPgynyYCXBa815Ho47zT2rOS9cAQVo8GCHsIEJ6B6c3CMAWxVExK7eOKJw4G1jH+2OBr03zOFrxyACYCEoJBDdPQYRdUtY/B6M3aAW0eAXCz1E9kD04905RG7oe6uSrb1uDkRIrsNKZbcIeMbmDG7ki4XPr+9TRD0MJ/tBlyHqg5h5JToqdpyxeYMb+FH4FeoJot4gTvk41w59uLqFcEYQyXNbNCOI7D10ewN3PLiMsasEN/Ir7mFENhluO7SyDa9C6GJENtn39+wsxBGF7wHPiCKyZ7ff2GGjIHaDziNijI1GRIxNjIgYmxjcyP+JiIixtOBG/tlKRIylRUSMTQxu6romIsZSc4hq8wOMAEYygGLIUAAAAABJRU5ErkJggg==" InformativeScreenshot="684d9dc86b64e4b7854b546e58933e04.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="217, 229, 15, 15" FullSelectorArgument="&lt;webctrl id='ext-gen46' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen46' tag='DIV' type='' aaname=' ' /&gt;" Guid="f8a7530e-0f2f-497e-a587-c87754d2688b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVDhPxdE7DsIwEEVRr5wKsRck2A34FxfJJtwOvOKh8SSRHGHESDdF4jkp7OZlkVH9Frve7t3Z3QbDgSNjwQ92FOJocIXVWrvD/Bc7nS+b7zEN9vBe0B4GiNlvGOzRWGH8C9IQ098xDfYMQZDFtiBmMRq7WE+YBvMxCvoGozEWCykJIoZb2lq06duk4WLOwgj2Ds7rfZfeDx0O9GZ3XZomGZXLpciYirwA3ikFscTrzMwAAAAASUVORK5CYII=" InformativeScreenshot="0529f589f0a5dbe5035bfb73a6d5b87b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="234, 289, 15, 15" FullSelectorArgument="&lt;webctrl id='ext-gen58' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen58' tag='DIV' type='' aaname=' ' /&gt;" Guid="6b0aea2a-c593-43fb-8312-0c6056817162" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVDhPxdE7DsIwEEVRr5wKsRck2A34FxfJJtwOvOKh8SSRHGHESDdF4jkp7OZlkVH9Frve7t3Z3QbDgSNjwQ92FOJocIXVWrvD/Bc7nS+b7zEN9vBe0B4GiNlvGOzRWGH8C9IQ098xDfYMQZDFtiBmMRq7WE+YBvMxCvoGozEWCykJIoZb2lq06duk4WLOwgj2Ds7rfZfeDx0O9GZ3XZomGZXLpciYirwA3ikFscTrzMwAAAAASUVORK5CYII=" InformativeScreenshot="796f0a218cdb0ca3f3d6cc918325d629.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'unchecked'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NCheck_3">
+                <uix:NCheck.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="24, 380, 13, 13" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl parentid='classification-mode-3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='classification-mode-3' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' aaname='Sex/Known Offender' /&gt;" Guid="28998efb-c6c9-4bfd-8ee0-029a8c2f253e" InformativeScreenshot="4925c41cc307f5dc1263c9b3626b66ae.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="69, 380, 111, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl parentid='classification-mode-3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='classification-mode-3' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' aaname='Sex/Known Offender' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAASCAYAAABo6+EZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKJSURBVGhD7VbdzSMhDEx9FEUlVLKv18R2kRI4/2BjG7jky7dSdCseRlowhvGMIXk8n8+6cQ9sM2+EbeaNsM28EZyZR37Ux6MhlXqa2KfAPfPRv1M5NXaWdNk5V4D4SP0A4T3ElfNR82LtZ8D9Ui3nLPYa3cwjG5JnLeVwCz8Dksv1aGNn5llqMrGvA+u3fIifETaOAdT8+QqdBBeZSV13KTEACmT27GZCsyR/S78L5jO9icLfNTtinvM7XHUzqfPmAvvnp3UvdXI/mNaEJ9M+sTLG/ce1KEyqOZtzQhPofMuLzXeWbERoovyBmlKuGUSX/Kn4q1dCDKRaZQ+smY3UOeWB5/Z51ZKaGnhozBrmc1xsOJfnRUfWpc/7P0DNUEyWoqNorkPpMBDBzimQpBeISEBRdMZgpinePGnReCqA+Nj9WRAvHqwJT+Os4QgrM+38UGO8mcjBGGHjolPL7TX8Y494nuFCOmLzh8b0ZgrocNw0dKCiEyOBXBFmD9sEAO4kQ0jEXxbF830dwBSJe4hYCX7jC9xC2Zvmo0lRIEEwXWHXD7mBM8YHnRr3kKsXZGiibiZrFWFiQVvE3EwlOhFzsk5Jm5gKGuZ0nSskCPOmmfQNRR1w22kfGOcDc9v4XTOH8xnuVRpyQw7GnTEGIfdtMyeGIZyOBu43MzuheVO+eXOSvdhOgmNGUINIoo9XZrYzVAhe14uMY8xbNQxgaWaLxbW2piF3xnku8tLMljOrezjf4KWZbBrfMoTt0lmM5xbF4/ekq0YSUszaTMnT84MZ/o9PGP/ETICvMwg55EbOCK5n4Bpyu5kwJo4mx55LmvaYaPfSzI3/H9vMG2GbeSNsM2+EbeZt8Kx/ASwmAPaai6RIAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheck.Target>
+              </uix:NCheck>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="217, 289, 15, 15" FullSelectorArgument="&lt;webctrl id='ext-gen58' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen58' tag='DIV' type='' aaname=' ' /&gt;" Guid="626cb93e-0d08-4310-aef1-cee3bd1f712d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACrSURBVDhPxdE7DsIwEEVRr5wKsRck2A34FxfJJtwOvOKh8SSRHGHESDdF4jkp7OZlkVH9Frve7t3Z3QbDgSNjwQ92FOJocIXVWrvD/Bc7nS+b7zEN9vBe0B4GiNlvGOzRWGH8C9IQ098xDfYMQZDFtiBmMRq7WE+YBvMxCvoGozEWCykJIoZb2lq06duk4WLOwgj2Ds7rfZfeDx0O9GZ3XZomGZXLpciYirwA3ikFscTrzMwAAAAASUVORK5CYII=" InformativeScreenshot="1c3f82ecb0449db35fc64175286c9400.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.5 Take Map Screenshot" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:UiElement" Name="ScreenCapture" />
+                <Variable x:TypeArguments="ui:Image" Name="CommunityCrimeMap" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[CommunityCrimeMap]" OutUiElement="[ScreenCapture]" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="259, 190, 1028, 424" Guid="47bacaec-3338-41ae-b0e0-28af4c2c362b" InformativeScreenshot="482c24500904a97f658eaed5ecd47292.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NTakeScreenshot.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTakeScreenshot>
+            </Sequence>
+            <Sequence DisplayName="Step.6 Data Grid" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Data Grid'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="306, 165, 66, 21" ElementType="Text" FriendlyName="'Data Grid'" FullSelectorArgument="&lt;webctrl id='ext-gen81' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen81' tag='A' type='' aaname='Data Grid' check:text='Data Grid' /&gt;" Guid="c9995034-8378-4697-b46e-b660d78d4525" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAZCAYAAACM9limAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN9SURBVFhH7ZlbTxpBFIDnr/Fowp+wvNTLf6jWGz+gL9UKFYjaR2OqKE9NmhpFsIgi98sCIo2Ntah9MTk9Z3bPssvOFh/6tGDykZkzc2bmfMwGiOLd+1UY40Tc3NzAGCei0+mAlXA0NpIMehDX19fA0IRR/aParS5EG18IGnh+foZkKjV6pM9MOexDtNptICKbW5A5z0IqnfYmZ2fufM9AJnshxbAP0Wy1gCAx+UIRzjKZ0QMvBNVOYtiH0JpNIKJb21BvaGgu60nO/0H2MidrJzHsQzQ0DQgS07npwkUu5ym+fJgG39tduMS2G7l8ATrdrhTDPkS90UBbDYihmLu7X3BVKAzhCFZf+8E30WcydKSYZ2dn4WXzHByFYdKyl29iCXYU876GUMDCZ9d4HttuFEplWTuJYR+iVq8DEdv+BA8PD1Asl4dwAmtTfnizb+/7FuOWOU52F/3w6uOJcsyV/WUUMQNrx/ZYf+/hfPs4I89WwrYb5WoNa3+UYtiHqNZqQJCYp6cnqFSrQ0jCOoqYi1tjBzCHBawnud1/hwMbSajEV8w+FUrzjjfwwGZsBfZse+jsLRn5ijG55tQKzNGbMhWBOK23dGCM28/Qj6up1htY+x8phn0IHmQxbMydFISm/TB/OCyGHAbxYEHYx/b+MhYZSdnHJXqucywB81iUY01Grj0LoZTeT0ZmwbeckG3rXta4G3WtaYphH6JcqQAhH6XHR/MZcycNYZKQcI/F8WD92xCEuBELRNP9nHQMAuacgTGJIcZY8zSKBRpzZSyBYqZjcGrMl+MoQM+bhXB6MK73VTSaLXjE2kkM+xD8nJGYXq+nTLSjEtM/jDwIH1gWrxJjL9ohzcAZt+z9n8X0eg9SDPsQxVIJCBJzf/9bmWhnUIze582tB5FtVzF8eF2SSows3lLky8Toc3g92vclYqh2EsM+RKFYBII/rlWJdgwRxrV2PgZ6oTK+HDRvjF4kxS03S/aDMO9yYyRmHmNZTykG+5bHNDBtibtAYvjjmn2IPL4QJOb29qcy0euQGKqdxLAPwV+E6Jtvt/tDmeh1GvipRLWTGPYhcvk8fiXOSzHt644y0fOgGKqdxLAPmxgNr5Qy0eugGK3Ztou5vLoCgsRU6po60eugGKqdxLAPwb9Co5tb+Nuiqk70OiiGaicx7GP87xMXzBszxkoO/gLvNQIsRVhzWgAAAABJRU5ErkJggg==" InformativeScreenshot="03ad4ecc55e70ad5c32f4e2ef9259531.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.7 Extract Data" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Class'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Incident'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Crime'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Date/Time'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Location'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column5' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column6' Name='Accuracy'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column7' Name='Agency'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column5' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='6' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='7' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column7' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='8' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="414, 593, 16, 16" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ext-comp-1083' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-comp-1083' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' class=' x-btn-text x-tbar-page-next' /&gt;" Guid="088ee8a4-4395-4154-80a1-730c3864078a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVDhP1dG/S0JRFAfw88c0ukSLW+Dk2uhUU4mg4ODS2hKZ0CCB4dTQEjS59l84CCaV99d7b6jWaPh6vaKInHNBuEvD5zvcc/hy37tUFAVSojzPkdI/KMx8SNoPjj2PoSzLIGkOLE67H+xMEi2s9w0eX7FXKTkfkrNbHQqvX4BKc8zu7CLnHCS1mznuR9+oD39xMfxblTJ726KFJ1ef6D3/hLJS+wul8wmOak/s7hpZH5Lq5Xt46XXZQfWO3dtG1lpIjjuzcMtNGbOzi4wPSbn1Fv7bsoybc8gYA8lhY7oqY2aSaOHyU7nzGNI+UiKtNVIi5SMlUkohJZr7SEdhAfLBoeESCVIbAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="259, 249, 453, 1500" FriendlyName="'22052812RES. BURGLARYApr'" FullSelectorArgument="&lt;webctrl id='ext-gen176' tag='DIV' /&gt;" Guid="a15ec1a6-7b0b-4270-96d6-6aba061cce45" InformativeScreenshot="f5cdb4b516773051d14e05e8ab6871c8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NExtractData>
+              <ui:WriteRange AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Output\Events.xlsx">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteRange>
+            </Sequence>
+            <Sequence DisplayName="Step.8 Offenders" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_34">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+              <uix:NClick ClickType="Single" DisplayName="Click 'Offenders'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="320, 191, 67, 21" ElementType="Text" FriendlyName="'Offenders'" FullSelectorArgument="&lt;webctrl id='ext-gen154' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen154' tag='A' type='' aaname='Offenders' check:text='Offenders' /&gt;" Guid="74be7ea6-6d40-4c17-85b9-63fdb94a2160" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAZCAYAAABjNDOYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVFhH7ZnJThtBEED7S7hx4IfYvyKE7ZIoAv4gCGxAkQICIkWQBIw5R0JC8habxfvY4wVjBGI1OVaqeqZmsduDRU5gkB5qV3eVa960PTMgPvv88IYacX5+Dm+oEbVaDZx8WV3rWppdiLOzM2BoQTf/0PE7fYgq/iJoIhSJQCQa9YTWvEbCsT+WIHYiKtUqEF/XNyCeOIJYPO6JStiLIRZrSzSegPjRsZTDTkS5UgGC5KTSGVxw5IlK2GvgT+IYUpmMlMNORKlcBmJ1YxOKegmOT089UQl7KSQ8OD5JQrFUknLYidAxQJCcWr0OyXTaE5WwZr6/64OeXqR/Hn4fzEM/jZEP2+r1HbH93qinmuuQEw+SqTSc4/GTHHYiirqOO0aHNZRzfX0DmWzWE0PSISwMmAKIsV+2wMMFGOidgC3z9dZYHwzMH9rzz+XnBPQMLMCBaq5DUh6kszm4vrmRctiJKBSLQKxtfoOHhwfIaZonmVwIfIN9MLgQwnFO8mMcBY3vGq93JqFncBEO5Zyx9tOOse6/cNV9HlkPcloBj78h5bAToRUKQJCcx8dHa6Id+cAU7pYp2EFReSbshyEZ24MZ3k3I9McRe3cN+SGkRWBpyJ6fCVC+EZsZp7oUH4GlMNd2rzdqtMZVdSgWWnS8//ieWVONVtTx+P9KOexE8CTL4S3VjrBvFJtcgrBLWhBme0dhOYrj4LRjPgrL2PBs0FhHucO+qJFjrTPW9EwEZXx3wh7L9zLHzrqd1ClEl2CYe6I5nxlvQ7FUtuSwE5HL54GQH6tGQynEScRPcpYh4orvwxw2shLDsWyW52Owgg3PBe2xdSYl0xBwrTHrT+435TrrdlbH6AnnWnpVo5cr0Gg8SjnsRPBnjuTc398rE11Qk7IZRyy2jGfJjD0hx26eccc7lfNUHQvZmyHJFW+C5Nzjdy7JYSeCr0Ik5/b2TpnoxmjCOADF67ZydAhMus9kwN96sLYcc705du7YTuqQlDl/zBibPclxG0jO7d2dlMNORBrvCgm+lKsSWzGF8La2RCEeclry5Lr2cqyPBjI8ZMvppI4zl7DjakgOX8rZiaBbZoLkXF5eKRO7AZJzeXUl5bATwTdIdIdcr18oE7sBHa9W9YsLKYediNNUCgiSUz2rKRO7ApRTNf/Yx05cckq4tZSJ3QDKKVWqbjknySQQJCdfLKkTuwGUo+nGUzk7EfzEurq+gc8fmjqxG0A52bwm5bCTt3/NeGDtnDeaOYV/3TQeL1dYe50AAAAASUVORK5CYII=" InformativeScreenshot="c7b1c9428b9746cda0a0bb47669fbfa6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.9  Extract Offenders Data" sap:VirtualizedContainerService.HintSize="476,467" sap2010:WorkflowViewState.IdRef="Sequence_35">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Class'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Offender ID'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Address'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Offense'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='First Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column5' Name='Date of Birth'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column6' Name='Sex'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='6' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column5' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='11' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='table' idx='1' /&gt;&lt;webctrl tag='tbody' idx='1' /&gt;&lt;webctrl tag='tr' idx='1' /&gt;&lt;webctrl tag='td' idx='13' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_4" MaximumResults="0" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="414, 593, 16, 16" ElementType="Button" FullSelectorArgument="&lt;webctrl id='ext-comp-1218' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-comp-1218' tag='TABLE' /&gt;&lt;webctrl type='button' tag='BUTTON' aaname=' ' /&gt;" Guid="ae196cc5-1bdd-4084-b4b4-117b9c29bf2b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVDhP1dG/S0JRFAfw88c0ukSLW+Dk2uhUU4mg4ODS2hKZ0CCB4dTQEjS59l84CCaV99d7b6jWaPh6vaKInHNBuEvD5zvcc/hy37tUFAVSojzPkdI/KMx8SNoPjj2PoSzLIGkOLE67H+xMEi2s9w0eX7FXKTkfkrNbHQqvX4BKc8zu7CLnHCS1mznuR9+oD39xMfxblTJ726KFJ1ef6D3/hLJS+wul8wmOak/s7hpZH5Lq5Xt46XXZQfWO3dtG1lpIjjuzcMtNGbOzi4wPSbn1Fv7bsoybc8gYA8lhY7oqY2aSaOHyU7nzGNI+UiKtNVIi5SMlUkohJZr7SEdhAfLBoeESCVIbAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="-188, 237, 3855, 1264" FriendlyName="'5155023View Image403'" FullSelectorArgument="&lt;webctrl id='ext-gen221' tag='DIV' /&gt;" Guid="e6a5d280-c370-4833-8044-dee8970d85f4" InformativeScreenshot="895eeb9d230a2350ec658484f267f109.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NExtractData>
+              <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Output\Offenders.xlsx">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteRange>
+            </Sequence>
+            <Sequence DisplayName="Step.10 Analytics screenshot" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_36">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Analytics'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="378, 165, 63, 21" ElementType="Text" FriendlyName="'Analytics'" FullSelectorArgument="&lt;webctrl id='ext-gen83' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ext-gen83' tag='A' type='' aaname='Analytics' check:text='Analytics' /&gt;" Guid="8d812091-ac9a-4505-98a3-db57c4e16f3b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAZCAYAAABq35PiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPgSURBVFhH7ZlbTxNBFMfnk/StD/1EWuRbGG4vKlG/gYYUMCZCRF+I0Cuo0RcTI7SlVNpSet1CW7QFFOT17zmzne2unV3vRiskP5jOzJmd85uZ7m4Qd0KzuMBEtNttXGAiWq0W7NxfWPxv2MpsO3IXzWYTCu7wP/08f/FSClH5iwP6xbCIjWQSyVTKE+4zFKTSOD45kUKUA7F/cADmwcMlZLazSGcynugE/bWk0+5sZbBF+S6vhmX+jGjs74NhGYXdIjLZrCc6Qf8mWezkC3gSicj8GWE0GmAWlh6hVjfwNpfzRCfob2Xbg+zbHZTKFYRjcZk/I+qGAYZltA4Pkd/d9UQn6Md4gmv+IO6+0rX9GnY8yNGuMBr7iCbWZP6MqNXrtCPqWCQZx8cnKO7teaKkLF8NwOcfx7JN1Pexihv+Ecy81rUxrzFzKYAbK73PK+PwXZrBq4F+7hS8KO6hTYufePpU5s+Iaq0GZvHRY5ydnaFUqXhSLJWICKb9E5geC2A6zJ9/BB7jCkJvdG3MBkKXf2b8Eva8oCPS6R5h7dlzmT8jKtUqGJZxfn5uNbhRJiHl6CR8Y7H+X64jwiQnODaJoJ93TQA3o2a97Ner85GAuU2uj+GmLCcxF7T1rZifp65fscVMIsxjBGexYeuj2mWs/RpWPw+qNRzRSVgnGcqBUI1KhtoybrCQyHgAt+IkJzWHEf8UIj1RXO8LzmGTypuhUatslyn7jMepHMct/yjmU1Qfn+rVUZnHlHEpzFPC8jpcz31cx+ax+n0jocHrDkA3C/5aYBnKgSiVy/StWjaPyadPWgFOErhNSdxLczmNezTh23GzLToRwMhs2uwnJz+PpBXTWzVmIvHFOP1ycna0N4Zz7P54X9RLzDofLUzUqvsKRkPuDD4myoFQZ4hlnJ6e6gPt8KTsiVnJuckwJ6rqOdlBGUpCgvrqRXvLUCjp3yCFZHSPjqUM5UCouwTL+PDhoz7QhiNhJj0vjwpf3EuGOfneCmpkmOP0xbrLMK+jymZfGkvF2eZjtrlAMjrdLt1Nnll3SrFbLIJRt1ZtoA1HApL+pF2PCZflio3SpPU7YyB5Qu4itdL28ZRU2cYxzs+OxXKDZLx735G3VuVAFOgXwzI6na4+8E/AK+pY7d8MyWgfvkN8fV3mzwj1gMJPoIfUqA38Awwcv9+OgWarhdjamvWQJnKFAhiWcdBsaYKGFQMNelONJBIyf8Yhg5/V9YHDCL2PUL7huE3GTj5Pr7J5KaNcMzRBw4qBCrFKb63KgVBveAsPl+h5vqIJGlYMeteqYiUas95yL/5VYMPaGRfk8Bm8Ze34V3VkAwAAAABJRU5ErkJggg==" InformativeScreenshot="8bb4a82c544a5e2c2010752bf813aa9a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" ScopeIdentifier="de9aa7c8-5de1-47f6-8e14-136497bbf1c4" Version="V1">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable BrowserURL="https://communitycrimemap.com/" DesignTimeRectangle="0, 0, 1296, 648" FullSelectorArgument="&lt;webctrl parentid='highcharts-0' tag='rect' /&gt;" Guid="6bb5315b-846a-4764-8f00-a037dc3de5b6" ImageBase64="" InformativeScreenshot="cf66bc0e15f56c02c546fa15fdebc74c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NTakeScreenshot.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTakeScreenshot>
+            </Sequence>
+            <Sequence DisplayName="Step.11 Sending email" sap:VirtualizedContainerService.HintSize="476,481" sap2010:WorkflowViewState.IdRef="Sequence_32">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uma:Office365ApplicationScope ApplicationId="{x:Null}" ApplicationSecret="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Tenant="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="434,387" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" Services="Mail">
+                <uma:Office365ApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="mg:GraphServiceClient">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="304,261" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:String[]">[FileDirectory]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:String[]">[System.IO.Directory.GetFiles("C:\Users\N.Lakshminarayanan\Documents\UiPath\Project1_RoboticEnterpriseFramework\Data\Output")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Sequence DisplayName="Sending_Mail" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <umam:SendMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" ReplyTo="{x:Null}" AttachmentsCollection="[FileDirectory]" Body="[MailBody]" DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendMail_1" Importance="Normal" IsBodyHTML="False" IsDraft="False" Subject="[MailSubject]" To="[ToMail]">
+                          <umam:SendMail.Attachments>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </umam:SendMail.Attachments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </umam:SendMail>
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </uma:Office365ApplicationScope.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uma:Office365ApplicationScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1296, 648" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAh4SURBVFhHpdd7UFNnGgbwWBURCAQVtu0/OzudcXVFVEBATdWKLVvkIuEmWAoUtOttqsICIiqKiEQBoV4xut1O1d11lW4RvFTSQ0ggECABkhAIIF4QpXZTt1Pcdbt59j050QoBq+07804YhuT5fe/58p0D70XLi3kQM69mgJlb02+aU9OHObIeeMqMmCM3YI5Ci3n1Gmr1kE+jsptaskhd/WvrW39Z+TDfSnwY05BXzQNQOPVtsIDZsm7qLnjWdsBTrsWculYCNMOnQQn/phoINdfNS9oudy/TVgitH/Vy5cs8Evoy35t8mIfwrvkGXjWDFH6Hwm/Cs+YGZtewgA54yPSYLW+Dp6IVc+ub4KVUYUEzC7iGpW0VWK67iKCuM+qwXsmLT8SPeZTvywyZLeHMP+HFDGJezT0C3OVWT+EelnAO4FHbRgg1AVTwbqiHb5MMC1qqLYDAjnN413AGK3tPDMX158dYI8YuP+Y/Elo55jPfgQXQ+C2rn0fh7AQsq6fRz2KDLa2jn1lAK02hGfOUjfBVsRO4agWcRVh3GQsAAcyr+/PGRvgzj/MJAFo99fcU/i1N4AEB7lsAnjLu2nvIDJbVs8GzZO34nawVs2pZQAvtBRXtAxmE6itY1n4RgfrPCHAC0TcLQeFIGNhhTh5Mt90X/sx/hRRu9mP+bQHMZ/5F/ZCC2Wt/l177afUsoJNCtU+DR/ZseTMhGmgjfonFmgoEaM8juOsEIm4UIe52LpLuZ2HN16lD1tgfy495bKKm8EdWwHfwkpow84tbmFnRS92DGZe6CGCkcP2o4Wx7yFtoLyixsPkKAf6BgHYWUIaIXjFib+UhaSAVawY3YaMpRWKNtqxewoY/Wf30c31w230NLqnlEGRWwjXrCqZkVVFfwtSMcryaX4U3/t48BoD9KjLwbZRiUUsllmvPIMhQhugbuYi9mY3E/i1IubceGx7Em63xFsAQXX94fP4NBFnXwM+4BudsBi67FBDk1sM1rwFT8pSYmleHabkyTNstxbSdl/FqbhWmV2qGAWbLVZhbJ4e/6hIWt/wNAa2fYEVHCUI7xVjVtw0JdzYh+e5a/OF+PDY9iJRQ+A8xBMD0M/1wSL0Kp+214Oc0wnmvBi772yEQ6+B6UIcp1FMLdXArbIPbgRa47a+HW64UbtkVeOMCNw2P2hY6lBQEUGB+fRUWNV/EMs0pBHcUQ2TMQUxvBuJubMYH/Wvx4b14rB+MHuAtqn6kmXn+a0xOk8IhWwnH3Wrw83RwLjDARdwJQWEXXIuMmHLIiKnU00qoDxngXqyD+4EmuOfJ4LajEr+tUtKpKMdcuRReisvwbziPN5s+xTL1MQTr8hBu2I5o4xa835eCpNuJSOmPxYd3ReB5Vzz8H39nI+yzVXDY3QbHvA445XeCX2CE8wEjXA52Q1DUDdfiHkL0YGpJDyE68XppR/evSg0F7kXqdPd9CuVrBdfhwbCA6wSoxALlZ3hTdQpvNR9BiC4XIkMWAbZide9aJN5MRPKtKA4w4y+DmLS9Gfa72jA5Vw+HvE447qPe3zUcUcghBNl1+M2Wz0us2+dpuefVJk4vr4a3/AJ8FefgX/dnLFaVIaBJjOC2TIRqMxFp2Ij3ehKR0LfaAlhzJxw8t+Iu2GW3YlKOHva5Bkzea7AgHKwIpwKCiDmESzoDxyCx0pppUzM+ufrYW3aWAGexsP4kFisPYplKjCBNBkLb0yDSb0CsIQ7x3VFIuiFCys1Q8FwPGjFxpw52u/SYtNsA+z0cYvJIRKaCwgvgFFaabs2zKZ+/Xm33ln0Kv9ojWKQoxJIGMd5pzECgKg0hmnUIb09GlC4e7xkj8b4xBCl9gWbehGwtJhBg4q4O2OV0EKLDgrB/FrFXD8fQIgovAV90PNWaZ1PejCTfR3aKAIcJcABL6vYgoD6NABsQ0pIIUXsCYvTRNAUR4jt/j0RjQDdv/HYC7NATQm+LYC8Ji9hQBccQAoiOgR95ssCaZ1M+X5UMzK85goW1+6n34S1FKpYrUxHYuA4rGhMQpo6HSBOFWH0IYnXvIt4QIOS9sl2H8dm6URGTrAiHiKNwWnmYDQc/+nS3NW9YeUk/FnpLi+k0FcOfyYWwdieWyrciQLEegfUJHKBJBFFLKCI1QYjTBzKWN76SpTONhbBjJ5HVDIeQQlr9cfCjTrEAMz/qtM3DhXe1uNxbWghf6R4sZHZCyGzF0tqNCJAn4526BAQ1rEKoKhwidQgL4MLZGrdNxxACTxDjR04inQ6n0ENwiihjw6n/RJDTA9a3Dyvf6hy1nzTHvECaToBUAqwjwAd4Wx6HoPpwBDeEm8JUoZutf87VuG3aGELABkE9kb4Z9usq4RhWah0/hXMAdhrl1o+wKaF002Yh85FkCZPMBMhWM2/XrpIEyiPGfjYkxBCLGPcsIptD2KXVw3Hlx6MB4Bx5ctT98PKVqc0nBCw9AjExXUUTKIHT6AA4R5QNOYtODB/rc8p1RWGMa9DBUR5QM7Um3ggEB6EzIPww7YETFP50DzwLAAGojw+5hB8rd1l51OaZTxByKEYQXCwRBBeZCAACjDK5TK2Q2jwaYlLKF3AKP0qhEg4xOgAEAAGoj8Al7DAEoaXUJSAACEBdBAKYCTDGfqBLQY2RiPEZLXCMOEaXgb4J7FfxlwHyrWljVKZWYoOgtlt3jaZwhNuMkSziZwF+fA58bnGTMLOQZxH2SRe4S8GeCZESAlD4iwHMBPiJlY8sbk+YRiIsk6AAuilROBvMhTvTfWIMgIkAP+//Q0tx06BzgoVwiPHpLZicdBF8uj8400ScKZR95YKp6fcEGCLAS676eZXJnphahhCmJ6fmhKw22P2xge6WX8Lxo6/gmsr88Fpa9cPXU86PecseXjze/wGADjhbeB2rcwAAAABJRU5ErkJggg==" InformativeScreenshot="4fdb56ec591053ad9b7f9b34ae51da2c.png" Selector="&lt;html app='msedge.exe' title='LexisNexis® Community Crime Map'/&gt;" Url="[URL2]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

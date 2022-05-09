@@ -1,0 +1,559 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="URL3" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,1355" sap2010:WorkflowViewState.IdRef="URL3_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mg="clr-namespace:Microsoft.Graph;assembly=Microsoft.Graph" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uma="clr-namespace:UiPath.MicrosoftOffice365.Activities;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="70">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="URL3" sap:VirtualizedContainerService.HintSize="476,1250" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="www.crimemapping.com" Name="URL3" />
+      <Variable x:TypeArguments="x:String" Default="28208, Biddleville, Charlotte, NC, USA" Name="Address" />
+      <Variable x:TypeArguments="x:String" Name="CurrentDate" />
+      <Variable x:TypeArguments="x:String" Name="NewDate" />
+      <Variable x:TypeArguments="x:String" Name="NewDistance" />
+      <Variable x:TypeArguments="x:String" Default="1 mile" Name="Distance" />
+      <Variable x:TypeArguments="ui:UiElement" Name="URL3Screenshot" />
+      <Variable x:TypeArguments="ui:Image" Name="Image" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="s:String[]" Name="FileDirectory" />
+      <Variable x:TypeArguments="x:String" Default="test" Name="MailSubject" />
+      <Variable x:TypeArguments="x:String" Default="Testing url 3" Name="MailBody" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;anil.devarasetti@greyco.com&quot;}]" Name="ToMail" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;n.lakshminarayanan@greyco.com&quot;}]" Name="FromMail" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: CrimeMapping.com - Helping You Build a Safer Community" sap:VirtualizedContainerService.HintSize="434,1158" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8f895217-8162-4a5e-8aeb-771948d59c1f" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,902" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Step.1 Enter Address" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[Address]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/" DesignTimeRectangle="80, 327, 478, 39" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="59902880-7910-464b-b359-3ef96add7883" ImageBase64="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" InformativeScreenshot="6c5ceb01cf599dec9b3b92a571f2cd74.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+            </Sequence>
+            <Sequence DisplayName="Step.2 Radius" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="8, 248, 75, 75" FullSelectorArgument="&lt;webctrl id='filtersWhere' tag='A' class='viewWhere' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filtersWhere' tag='A' class='viewWhere' /&gt;" Guid="e119a51d-a23d-4896-8cd9-91b73dbabcff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAABPCAYAAACqNJiGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVHhe7Zu9T+NAEEfvT6eDLnTQkauACjoinU6hOCklJXTQUVJS7unl/JOWkU+Xzeyundw8aRV7HSfe59nPON9ECnbm54/vafPrNg3qQl4JIc9ByHMQ8hyEPAchz0HIcxDyHIQ8ByHPQchzEPIchDwHs5P3+fk5bKW0Xq/TyclJurq6GnJSuru7Szc3N+n5+XnImY7ZyEPa/f39VtbHx8c27/39Pb2+vm5fxdPTU7q+vt6+ilx4T2YlDynIKgGJZ2dnk0TipPIQtlqthr39oXrnVbsXk8lD3OXlZbq4uKha7XpW4Ukjj4ipXVgikM/twWzavFrQZuadTku6y6NwNPAt6SEOusujWj08PAx7h80kkdcjMjQebMnRtXmCG0Tb17L37SqPXjCfLbRms9kcjzwioVQehX95eUlvb29DznzoJo9qxIC4BM6hZ0Y6iblvCYhvGemzbvPolSVOqUQGzQSzmFbMWh7LT1ZeycIB8kqjvYRu8oiY5XI57O2GZgtKpZN/qv3RVNvSyAEKTwS17jn3oas8Bq09BsjiqIYqPUEakd7yZnWXR2F6VD9Wllt2FtBdHgXqtd7Wmu7yiIjT09Om0derXZ2kzWtZOA1vWg5RxKQdRumwZRd6rhdOJo9qS/Utna/+ix6dkZg08qhaRIq3wHRApbOXGkwqLweBRGFpW8WKMRHco42zzEYenQhRmA9seWUdL+9g6K2RHI9bjJCL0qpKviBAHqlFZ1PK7OQdEiHPQchzEPIchDwHIc9ByHMQ8hyEPAchz0HIc1BNHqsa9mEcJux2Yg/5e8fOA5vPXJZ9m7QoYI/bVRYtMthkr62EavL0XEl+0ax82Ik98CPQYrHYbmslxWLz2R5LWiAYO8ZzKpLLmt/Yezw/RlWTRyHsxfAjty5SheCVfVZGoEQe0vmePOlzOZ7fJF2Pvkfy7PmziDxgUTIvAPsSqPU3RaP+sVMiL/9sy9hx8vRoreTVpKo8rb8BctimGhMxKoTeo4iRpMfHxy/p/Pz8S2HZJs++T9jj/LmPPN00ycvPJc0m8vKoQpLatfyuk5dHiOT9LYmxYyRh8/kenlURugabqLr7UlWe2jM6D6qsfgIk+shXAfJCSZ7F5rOdS7fo8wFxRKGiG/IbWIuq8oAC6lFYtWtAgZSf98gt5KnJ0D4chDyiiosk8nI0lLH5JfLG2jxVO47nsnS+bpTk2fPVJu5DdXk0wFykhghC0WDzS+SNJQnLtwGp5On3XMmzie/Zl+ry/idCnoOQ5yDkOQh5DkKeg5DnIOQ5CHkOQp6DkOcg5DkIeQ5CnoM/8m7TbxVmlKxuk7hIAAAAAElFTkSuQmCC" InformativeScreenshot="bb58010c5b7e1caa8237641e26e6ed83.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[Address+&quot;[k(enter)]&quot;]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="116, 267, 327, 32" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='textbox' id='locationSearchWherePanel' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='textbox' id='locationSearchWherePanel' tag='INPUT' type='text' aaname='' /&gt;" Guid="e7152dc1-eac5-4d88-8cb3-e1d85c1428fd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUsAAAAkCAYAAAAAYhilAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATqSURBVHhe7Zk5UmQxEETn0ph44OHiYXIDTExuwA3AwgMPsydexyRkVGhroJeZyReh+FpKVSl9qehufm1CCCFMSbIMIYQFkixDCGGBJMsQQlggyTKEEBZIsgwhhAWSLEMIYYEkyxBCWCDJMoQQFkiyDCGEBZIsQwhhgSTLEEJYIMkyhBAWGCbL+/v7zdnZWbM8Pj7+sfq3eX9/31xfX2/3ogX9jGN3bGZav8q+/La4vb3dlmPx9PS0ubi42D6PxSmdqfDJNFl+56WdwsH7LrNEcUoHe19JbV9+WyRZJlmeKkmWE2aJ4pQO9r6S2r78tjh2sjwFTulMhU++lSx1iW5ubjbn5+fbr+eXl5ebt7e3baFOH2NKmPjUV3n3zdf6q6urbXF7hz7FoehSjXT0YK781HgeR5qUKBRL84ipdfTW4LE8EdT1+E8b1NVf9fWQtpZWiu8J/mn7uObBaA9Yg9Ytv8/Pzx/vu+59b6954ld+0ISt9kgaXJfjGt2v1q248if8bHohPj70B171u7u7D5ueFuFr9bg9rTA6UzCaGw7Hl36z1IvUS9bl8EMKOmx6ubqgukjYyVbJgWcL+da4+57pqOCDcezAdWiuLoV0qc1Tc3Xp1G6twe3dt+q+HhIHPinUfd/kY4T7B56r66KtizizxWe11d5rT3yua/e9Zj5+ZAsaZ2z0rURx8A/4qO/f445grmw9rvT5GG3FrLgfaaBvpFVtzZNtbWsuT58bDsePfLLETtTL4AeefrelXwli10OAfe9yg+sYobk9ze67FYc6fYzVNcheBx2o0/f6+rp9aq6jC7Ki32npE/KpsarV1z3aA6h76+2RBo3JtsYBxuir/ZWqX+ujf6ShMtuHmhx9rc4o5q5aqdPHGDaqg+xdUzgMB0uWsuUTihclvHqgWuBX8/xCzXRUdAkUHz+ybelgDN9+yIUf5jpX9tKsIpu6J/LTmttbi1P3AT2ar3X6mGv1d1XHQHuguuvxdtUw2muPKRirdi3w39ovtFcNPVrxva81js+WLo9fGWltzaMue+bqHXqZrS38PEf9ZOlwQOoFdaovb890VOqYt2sc992KQ117VNcge78IPXRpWvuDFhLIzM9Ia21Xrb7u0R7AaP92sa1xQOOtJOJU/W5fNbTo+XdNlLrvrt8ZxdxVK3X6GMNG9XBcDpos66Fhntp1rFIPLjFo0z/TUaFf65Jf2cqX2hqXb9csW/lqrQF7jYNiv7y8bG21HvmiTUzfN/z5b5g95IOYqmsd+PVPJFWrx6xz6fM9oF9j4G3XAPTTpl9+ZOsxhftq7aegz/ePeLKtGiqjcdfU0ktbMSv401pBaxlprW1pk586d6Yh7I8v/YOHwljr0Plh1zj2flDkg5fOywfG/QC1wK/mPjw8fByimY6KDhx+mMd/O3U4QQeUcZ4t39JBXXN7a3B7H3cd8iXwpX6K4mut2k+n7oP7wLeKxqqWmqB7e+B+wNtVw2iva0xo+fJYjvv2s1Q1VOreqmDvmlTnv9NuMwKtstU6oadV+DzqvbmUmYawH4bJMpwmXPZWsgw/i5JlTWzh/yTJ8i+ET2f102v4eZIsg5NkGUKHJMvgJFmGEMICSZYhhLBAkmUIISyQZBlCCAskWYYQwgJJliGEsECSZQghLJBkGUIICyRZhhDCAkmWIYQwZbP5DYzYepT+USUKAAAAAElFTkSuQmCC" InformativeScreenshot="ea7369c82758728ed40e955cbba6f36f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NGetText DisplayName="Get Text '1 mile'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="106, 386, 349, 42" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="57054b35-35e8-4a89-b6e5-d789d4f43456" InformativeScreenshot="21d1ecc053cca33996be72b3f1fd32de.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[NewDistance]</OutArgument>
+                </uix:NGetText.Text>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NGetText>
+              <If Condition="[Distance=NewDistance]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSelectItem DisplayName="Select Item '1 mile'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[Distance]">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="7">
+                          <x:String>500 feet</x:String>
+                          <x:String>1000 feet</x:String>
+                          <x:String>1500 feet</x:String>
+                          <x:String>1/4 mile</x:String>
+                          <x:String>1/2 mile</x:String>
+                          <x:String>1 mile</x:String>
+                          <x:String>2 miles</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="106, 386, 333, 42" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="85865190-7dad-430b-8b4b-1a5a788c7d9c" InformativeScreenshot="d70e252ad845f31fd7724f52bba3baac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector" />
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else part" sap:VirtualizedContainerService.HintSize="454,610" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="Count" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleDoWhile Condition="[Distance.Contains(NewDistance)=True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="412,516" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,349" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item '1 mile'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[Distance]">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="7">
+                                <x:String>500 feet</x:String>
+                                <x:String>1000 feet</x:String>
+                                <x:String>1500 feet</x:String>
+                                <x:String>1/4 mile</x:String>
+                                <x:String>1/2 mile</x:String>
+                                <x:String>1 mile</x:String>
+                                <x:String>2 miles</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="106, 386, 333, 42" ElementType="DropDown" FriendlyName="'1 mile'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="85865190-7dad-430b-8b4b-1a5a788c7d9c" InformativeScreenshot="d70e252ad845f31fd7724f52bba3baac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector" />
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Count+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                    </ui:InterruptibleDoWhile>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=#" DesignTimeRectangle="108, 595, 100, 30" ElementType="Text" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl parentid='wherePanel' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wherePanel' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' aaname='Apply' check:text='Apply' /&gt;" Guid="44cc61d9-eace-4d4c-822b-fbaf3db5be29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAiCAYAAACz35yrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKASURBVGhD7ZtPSsQwFIe9lpPMBTyLB3Dr3jO49ACCIK5cCi50LwgKbkQQERUVqfm186vp8/XPDNMm4gt8tDYvSfu+Jo4duzGfu6IP52ZhO18J71zhvd5vH97PFm29TqjDuSEO+yVxH30//wF6BVUJwL4uoAvv/UJuaL9kcio5aKuIEeD8/ELUqjdDrtSCNo+2jIwwQZnTFBSWBS3ISEdTUEALMtJhgjKnKSh8+tGCjHQIQTaDcqMpKKAFGeloCrIZlB0NQfjrWwsak+2zneL+7aFAObw97qzXStwG+20FfaAvxl4/3/w6BnYv94qXz9cS7Md1gOfTVr9umoLc9B8S9q8Oisf3p/KitYQxIUhofBxQCCVh+/H1WfYZx7GPuP82QQDt0Y825vnDhTrGWNSC8PzKuelnEBN1cnfamVwtWQDHWdcmCOAY7nrWcVxNEICIWD7g7Go7lzGoBVUPQ70aNBa8YCQj3o9jhghiovsEoY4J7xPEceMYtJlqaSM/MyjMHjx51oLGQiZUSxoTpQmSdV2ChowloVTcNGgvZ9QU1IL41YAWNBYySVoSugTJZQhbTRBnZzzWEEGAY6Bo5zA2yQTx7uyTwWNakTIoWCsyuUMFUe7USxtJJii+M2WJk6FJa6NtBmkMFQSWiV03SQR1JV3OLBOUQJC2vBEKYUJMUAJBuOCuNR3LHxNtgiYWxF+6XQnnDIOoMQW1FYwrY//VDDKGY4IyxwRljgnKHBOUOSYoc0xQ5pigzDFBmfNLEME/kNSvjMyxXe31kZTw1ZXq63y+kqK/ukJ43eVrLGUb5iAtDUE+nGgpR8rI5GSXQUr6uemkHFx7dd2xINlfGlzxDSXb/9flFxcoAAAAAElFTkSuQmCC" InformativeScreenshot="8d8af1751ae8fa7f5ac6c400e8645ae8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'x Close'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=#" DesignTimeRectangle="415, 196, 53, 17" ElementType="Text" FriendlyName="'x Close'" FullSelectorArgument="&lt;webctrl parentid='mapPanels' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mapPanels' tag='A' type='' aaname='x Close' check:text='x Close' /&gt;" Guid="51ee1b4e-a46f-406b-ba95-6b0b8a4f130b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAVCAYAAAD8dkbIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU+SURBVFhHjZgxdhs5EER1KlucIQ9hkQdYkmfwSszsYE1myte8gWKlCpToWLP9u1AAZsTdt0E9cIBGd1V3AzPS3WazmdbrcRrHIcZh2gQYgebGCRvQbJi7AeaLjznK/Eb7h4FxHc/hdx3xV/eywccQv4dV2ptHD/lqceraqD1jjEL8Dr/4vsuHmOwdGThjzSIh1oTfQCUgYCdfelYs5orAIhIym1jLffgJoSY959PQz3stdWQM5hQD3ylytqEXXNawMSmRLGRuoQjqfSizzBVhBRAZ8I29haaP2Lf6WoUmOv/Vt0GMGJVE7LsYEfcuRRnLzQUSqcy4mnougXsUkQ44q1oHgsuPkjYMISqEWdA6WlZtHD5632Ws/DKGsIyHX+b+l0gbezNVyWAFx+Nhent7mz4+Piqu12u1B8fjMW3O53MhE/4gHeMQYpIsZzGF4Xcdz1SX4yI7xKYdI8/FD/7GOOebmcDYX/w0kWzqkBlNEhhKpLPUqjmmGERdLiaPaAl6fX2ddrtt+B+nw36fc9g5OaDG4zn2qm1pUz9HdUssccJefPnto2BxAjwFuEpkbmSTAv8bJEyO+H06PU3v7++dwJbJ0+mUa9fr75hv1Z6LxJ9iY0MyksfKl07Y4JdKVzuJY8yYC4HMmaeKwZksWXl5eUlSEDeJvko8qz1aNdlDtR4eHnLOYG27fZh+/vyR+8BcpMQ5SW5xVX6XyUbYcp39x8NePFJM42g44RZaRCozu91DBoE4pBxAZ0tEgVsDMthTqbnAYkMVun2QqyIjHiOk2A+h3Xab/gAJenr8M+PbHtEtqd9ibp3cVJhT+ug5u9JwKiJFxEbPz881IOIrWTIcG6mUz52SsGyVJs77jscmEhH4hnTal+5wi1/icsIuBTw9Fh8I/RoXDK08j4+PbO0AScuKRzzPz0QCApNhZegpjbCpKEL6IOp9rdvPbE/g0FXSv/sEAdre4p0UVVvdxP2R5zVsL5dLcnyKJEggOlRN9jGiC14hsgkEriaBGkmdWzZ8bldlMhNVArV9AS62WD/s/8jg5/OvaX/Qb4hKoJLUVxg/PkI+b+Dy66+4jMasdj/fQwVCvDjEt2sTuHRK1m2oSkmgARnsIWe7RLmx2/q3qJ5FnqNKuoSWXbArInUjK2Hw4n25i3PIWgqI80qyWrd1sRcg+SGyvVMI6o0QhAitpeq11wO/+ciuZygqYqJyHGvRRqyJ8Kpr10vtAmLwOaZ2a13UJ1fdEULvv7TLKxJ1evz+yRbwjA22TlIV2WeXBZ8JiPTfnBCSIFUAe6pOhRzIZBBCdbDb148BtSgj+xzPVQRUHrJOOO9IPhCuv/+WgODKRzzPslFrOm7e+AgkeRbpNpUDMqDXgPteRPTOaWc4viZSLBVQRd3m3pOiw4Z9vqha1VvlvEcJVaIAQnufKaheNMElblsE9TYSqPWZSJEG+t5zpVw95k0sA2CbRLDVbQdyPexY/28/spmhE7dECqKajLPPPD2nDV9EoNhXhN3s4oEAkHCRyrbkLwIcpoPiMMaGJsTJWApMPznH/hYTzH3N0YtPW3wg1CLgRqK9XsbEUqTJmZSIeb4EKeMS2DgxFnPLj4P2BDLmDZ+gzSPCAuKZDwL+Qil+9FHPWvFXYvCbv1jyY0Bn7XPWe4GfUF4TQHY4bsKErnpd8IoZIds1eyen3u7MYYvPe7et9mzi9s2x7MtjU+zzPwM9seZYxFtABb+NUqnOD+BvPPsAIoFdE5dY+Ldoc2g+SdoqXl/6+3NEqO1pWz77yj4+/dJmHKZ/AObCNAgYN6LzAAAAAElFTkSuQmCC" InformativeScreenshot="3476d027e325bd3324a8d6dbec3c0c09.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.3 Date Range" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="8, 332, 56, 56" FullSelectorArgument="&lt;webctrl id='filtersWhen' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='filtersWhen' tag='A' type='' aaname='' /&gt;" Guid="a0b2b18b-4d23-4760-aeb0-bdaac583d670" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN7SURBVGhD7ZnPTxNBFMf9x03QkNAYklZjQjEKBWpaUVMO/QnFLrBtQRLqjSPcOHLk+Oyn7phxWHFL37a4u9/km6Zvp8185r3ZmZ19ZiQJl1d9Ld+PPkuAmwLgzo5cHNXSA3zYLsvISxHwSb0sF/7X9AD7zR35PviUogyPS/riJEUZzoCDeGKVAQfxxGruwJeXl7K3tyelUkmKxeLkE7fbbbm5uQlaxSe/sSPn/pf4gUejkRQKBVlaWnrQtLm6ugp+pS+vXZHRcYwZvru7m2QwDG5lZUU2Nzcln8/fu0YVxKH9Zll+fIvp4QFYytaFMQYW9Xq90OvVanVyXVPHzW05212PBxigMBDjfwHjVqs1aaMlr/5OBuWCPjBzNgzAdhRgrDmnO2+fS79Z1AcOm5euowJzD9BSt7gs/dOKLjBLT1jHXUcFxre3t5O2s+qg80HO/KoucK1WC+2062mAh8PhpO2sajTfy/lQeVkCJKzTrqcB1rp5dTvbMvCVl6W1tbV7HWZOA2jbQEQBNoMzq7qdkvj93fiBgfqb5gnc7mzIeV95a0nn3A6zc7q+vg4119z2rh8asGnU7WzJ0Fc+4qFUwzo9i1nXNURJn/aVgdkohHV6FmstS2T4dKC8LKEoG4+o1pq/6PBgewz8UR846uYjirWyiwDu+1v6wCjqBuQha204jCjpk+ONeIBR2BIV1QyYtvZb6+L1YnhasvWYTGtn1qjdfCOetxovMOLOHbY+u6aN5px11WjkxsCv4gc2AobskXXgMOs262ycoEb1xkvpebn5AS9a9caL+ZT0U1FjnGGvl08T8HLaMpwBJ1sZcBBPrFSA2UXZmwbeAoZ9x+4bQn7LKxnsnoTQ3sTt/zOxx0gFuFKp/HGqyEsye+PPAwS7K45p3GdbtpNAhx0a0N7EeUdlZGKPkQowMKZDPAcDjBGZoXN8RgF2ZeL8nznXWjiwDUVmGQBOPIBnj0yGER3m/a/neb/tAtslTemaOP/JJ1Ni4cAIQODIhAE3ts+fuW4eGrALbNuOI9rznulJAANFWZtskl2ymcvlJh1Es5Q0YiAZMO4ZCwc2Z1juzQsbRQG2SxpAdyBMaduxaaQGjICxlx3g7QGg5O3vyPzGgNlmgLjmDhLTxI1FlSrw/6AMOIgnVhlwEE+sMuAgnlhlwEE8scqAg3hi9Qt4VX4CCiQy0a+nahEAAAAASUVORK5CYII=" InformativeScreenshot="2cfeb17d9374fa9893e276f125edd510.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Custom Time Range'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="82, 411, 109, 14" ElementType="Text" FriendlyName="'Custom Time Range'" FullSelectorArgument="&lt;webctrl aaname='Custom Time Range' parentid='whenPanel' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Custom Time Range' parentid='whenPanel' tag='A' type='' check:text='Custom Time Range' /&gt;" Guid="aff7db85-9ff1-47ff-9111-7047620096e1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAASCAYAAABsHjEkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPJSURBVGhD7ZhNctpAEIVzrNjAjRy4QgzniDmDo1uEqnjhjVf2xitv2HjlDdE3jye1RkIQYyj801Wv0Mz09N+bHsn+NhyerbpxnjAaDU8axDgYdMVvDEq9UQPMdeu+Nyi3HhLBF4mnDRpt2EciChSgu3inguHgM5MIzr9I/AhokDiZXKyenp5Wlufn59VsNkvFeg3m8/lquVzuZWMTHh4e1lE2hZhvbv6mPMZlPlw3bRI5oM1C7IrF4s/aU1OK4nen/jFQkWgCKY7nCGwfIg9JojGdXqYYNxcRvbclkTpRL8/Vdbps6B4LFYntQMqPmvLagdTFYlEGPU7BF0WRigcxEARRXrOgzzr2EB+EXM+2+GX+8fExzYuUYvXy8pLG2IvERXSRyDP26ETiv7u7q2JRPuom7M/nv6p9sbvR8XxEF4nUTLWQLcb2h7gxiAs9gET/43F9C1qnKK7TWn5Det6oSMSRnQki0cXqI5Eis9fz6PGbdyI6KsA42VES8/Ss4IrKj4lnzs+OJaKXxLIw+PR+fOHTefLr50gOhUUv2jS2daIL7kOALdb4pfjK87rS6/KPPenJf4yTOdXtqhxzo4QPG5TsWHgdiRGRxHy/x+zNiVIs6r78IOTYhUTFNgox6/STL2uTdRfE/BVDuxuZyyV2VI7YpZBnslmT//t0Y6g2ysFdydhdzTN8NOuo10N/J452I5Exey3WiQQABaM17zGJ2MZHnM9teF/ELiTK1nYSc2GtrofAHsWqTkQn18N/FJPsuPBnW+ydTqd1bcp3eKy165aLc2qQiAOUfUpE4jApg5xEiou+STTqQs0TTEC+32NsH47EH8FWTuL3cn5NYtYJfTCJ+vKl034m/8xrHOM5T2P5vKrimozH5ZpqK/+TtX9qM2qMYz1NWo6KxPyOJgCM6BTVHy+sUzwC8FpdqNe/Ez1vvf1IvE72NpPI+6TuBD8rhotSTzZNTERFYuomvZPwjf5sNk1QPDqssU51npMUD2v497PX0ENkY5R0rIcd7HkNVCQCE2mxcxfMBhC++HxCKA6BW5yA55Xg9q/T45EYO/G+2sezhX2aF1HCIBRbsWLXneNCo2O5vb1Na+RY59km0TYQvtK9J19D2Ecn658WgyaJTeg6PXX0/7eGHLLrJyUOIbVODRVFKO2nvzFBZuPA4OByMPmt44lxgjrPd00iyf0viT7BiaCKJKOpezjIn2JRPHRkFL9Tu/Nq4tOReDxEkhSr0O6kffEBSOwrSPuf32+OFkn51dcV19vii8RelH62knQcojbjbPUPSbw3aG5RFxwAAAAASUVORK5CYII=" InformativeScreenshot="cbb647c6ccecdee784fb8a45c825b4d8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[CurrentDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM/dd/yyyy")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[NewDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[DateTime.Now.AddMonths(-6).ToString(“MM/dd/yyyy”)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT dateTo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[NewDate]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/500%20W%20Baltimore%20St,%20Baltimore,%20MD,%2021201,%20USA?id=dHA9MCNsb2M9MTAyMjQ1MjQjbG5nPTM0I2huPTUwMCNsYnM9MTA5OjQyMjQxODI5" DesignTimeRectangle="213, 1165, 316, 68" ElementType="InputBox" FriendlyName="'INPUT dateTo'" FullSelectorArgument="&lt;webctrl aria-role='combobox' id='dateFrom' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' id='dateFrom' tag='INPUT' type='text' aaname='' /&gt;" Guid="67530d02-18ba-4ddc-a90a-90d159599969" ImageBase64="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" InformativeScreenshot="ebf1a1f6ab85d3f5b887ec7f8b535833.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT dateTo'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[CurrentDate]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/500%20W%20Baltimore%20St,%20Baltimore,%20MD,%2021201,%20USA?id=dHA9MCNsb2M9MTAyMjQ1MjQjbG5nPTM0I2huPTUwMCNsYnM9MTA5OjQyMjQxODI5" DesignTimeRectangle="213, 1165, 316, 68" ElementType="InputBox" FriendlyName="'INPUT dateTo'" FullSelectorArgument="&lt;webctrl aria-role='combobox' id='dateTo' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='combobox' id='dateTo' tag='INPUT' type='text' aaname='' /&gt;" Guid="67530d02-18ba-4ddc-a90a-90d159599969" ImageBase64="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" InformativeScreenshot="ebf1a1f6ab85d3f5b887ec7f8b535833.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Apply'" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/500%20W%20Baltimore%20St,%20Baltimore,%20MD,%2021201,%20USA?id=dHA9MCNsb2M9MTAyMjQ1MjQjbG5nPTM0I2huPTUwMCNsYnM9MTA5OjQyMjQxODI5" DesignTimeRectangle="219, 1294, 201, 62" ElementType="Text" FriendlyName="'Apply'" FullSelectorArgument="&lt;webctrl parentid='customDate' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='customDate' tag='A' type='' aaname='Apply' check:text='Apply' /&gt;" Guid="56142101-49a2-4ed9-8e8f-5e942fa96fb8" ImageBase64="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" InformativeScreenshot="d9fb3990184c518860fbd6397ab00da4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="To Reduce the screen size." DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="334,83" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="pgup" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="033330c5-34c2-4b0b-a4d2-c8c255d0d901" InformativeScreenshot="a2521b439afcf67d2825dd0323859005" Selector="&lt;webctrl id='mapPanels' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+              <uix:NClick ClickType="Single" DisplayName="Click 'x Close'" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="630, 331, 85, 28" ElementType="Text" FriendlyName="'x Close'" FullSelectorArgument="&lt;webctrl parentid='mapPanels' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mapPanels' tag='A' type='' aaname='x Close' check:text='x Close' /&gt;" Guid="a55edad4-5272-47a0-91f9-6a202d0f0d4c" ImageBase64="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" InformativeScreenshot="2cd34d57c041c6daf928c1586d75b722.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="To increase the screen size." DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="334,83" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="+++" KeyModifiers="Ctrl, Shift">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="033330c5-34c2-4b0b-a4d2-c8c255d0d901" InformativeScreenshot="0b6e4a511f915b35e4a1abb7ad7b7265" Selector="&lt;webctrl id='sb-site' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+            </Sequence>
+            <Sequence DisplayName="Step.5 Take Screenshot" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[Image]" OutUiElement="[URL3Screenshot]" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f" Version="V1">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="0, 0, 1296, 648" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='svg' /&gt;" Guid="62932320-9073-44e2-892a-8caa58b5d050" ImageBase64="" InformativeScreenshot="0d7208f03766462a961fc585569d5a8d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NTakeScreenshot.Target>
+              </uix:NTakeScreenshot>
+            </Sequence>
+            <Sequence DisplayName="Step.6 Reports" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="8, 416, 75, 75" FullSelectorArgument="&lt;webctrl id='displayReports' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='displayReports' tag='A' type='' aaname='' /&gt;" Guid="bcde7fb2-d469-4368-aea3-0c4c149a7bcf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAABPCAYAAACqNJiGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANWSURBVHhe7ZsxTxtBEEbzB6mhooAaqGkoED3UpkoBEh19SBfJokKiRYiWxgWICoqLnnMTrYfBjj27Ely+J418d7vnm33a3bO9529GJ/6Znz++d+NfF12vTvKWQfISSF4CyUsgeQkkL4HkJZC8BJKXQPISSF4CyUsgeQkkL0FTeePxuNvf358Jjg2FpvLW19e7tbW1dxFxfHzcHR4eNo3n5+f+anVoKi8SR0Rsbm6GdWvGZDLpr1YHyUsgeQmaytvZ2XnXgK2trb50lpubm+76+rppvL6+9lerQ1N5Ly8v3e3t7UxwbCg0lTd0JC+B5CVoKu/s7Kzb2Nj4e7Ng+/T0tC/9+jSVV95ly4g4ODjo9vb2msbT01N/tTp8Gnn6nOeIGkBESJ4jagARIXkOfoLyDeBbR8TDw0N3d3fXNN7e3vqr1aGpPPDfMIZEc3lDRvISSF6CpvKOjo7e3TB2d3f70q9PU3lenEWEPqo4ogYQEZLniBpAREieI2oAESF5DtZifQM4NhSayhs6kpdA8hJIXgLJSyB5CSQvgeQlkLwEkpdA8hJIXgLJS1BFHkuK5+fnM3F/f9+XxuXE4+PjtPzq6mrmOPvRQ5CXl5fTn/ZZD+aBIb+UOS8Pf40yVl0SrSKPp6H8T08ECc8rt6SRwd8OeLVHcXmiygTyytoHx3kst1xMPzk5mdaB8jrl3xjII1qAt+C8Vagqz6CxNNIWe3y5h4YRBn90oT49DShDRtlDuIYtMFm9RXkY1FlVWEkTeUAPskcrlpXHULMG2rb14hLkIHV7e3u6vygPw947S1V5CGAusiFmCVq5D4PzGKb0JIYh20hhTrRzyzm0hHPtvRblYUTHVqG6PIYJ2+UQs3JeyzA4z+Y8gjK7mbDNucvKi/IwLJcs1YctyfrkyvIIkxZh8180bAHp0fQQ5WF8dHxZmsx5iGDo+d7zEfPkAXJ4P9/7bIHJ39UNn4fxqeWRLPvMYWDlPqwBi+QhjR7GOdRjXuQmwf5oNOprLc7DKK+doYo8hohPht7AMe6INII6PqxHUPejYWlQl48kJppex3uUsD8vD4N9f+4qVJH3vyJ5CSQvgeQlkLwEkpdA8hJIXgLJSyB5CSQvgeQlkLwEkpdA8hL8kXfR/QZCYU4XbIWRQwAAAABJRU5ErkJggg==" InformativeScreenshot="77c46608eda2fa2b06411d6d9126df38.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            </Sequence>
+            <Sequence DisplayName="Step.7 Extract Reports data" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Type'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Description'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Incident#'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Location'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column5' Name='Agency'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column6' Name='Date'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column5' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='6' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column6' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='7' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f" Version="V1">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="387, 589, 28, 28" ElementType="Text" FriendlyName="'arrow-e'" FullSelectorArgument="&lt;webctrl aaname='arrow-e' parentid='CrimeIncidents' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='arrow-e' parentid='CrimeIncidents' tag='A' type='' check:text='arrow-e' /&gt;" Guid="faac328c-3459-4e36-baa7-5b092e43b2fd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVFhHY3j14sX/gcSDxwF6enp0xVgdAGPTGo86YNQBow4YdcCoA6jigAN7dv1/dP8+VjlCmCoOiPb3+t9aXf5/2/q1/+/fvo1VDS5MFQfEBvr8z4gN/5+TFPO/qbL0/9GDB7Cqw4ap4oC4EL//OYkx/3OBDqgpzvt/ZP8+rOqwYao4IDE04H9XY93/3du2ANPCvf+vX77Eqg4bpooDDu4GJcJ7/189f45VHh+migNI8TE6pooDKMGjDhh1wKgDBq8D6IkxHDBQeIAd8OI/AIaP4oSN4W81AAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="9, 232, 1244, 545" FriendlyName="'Map itLARCENY-OTHER2022…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="c9e474b6-8209-4dcb-958b-8ea519e797a5" InformativeScreenshot="7269af07fd3ada1b125f81e558f04bc6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <ui:WriteRange AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Data\Output\Reports.xlsx" />
+            </Sequence>
+            <Sequence DisplayName="Step.8 Chart Screenshot" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=#" DesignTimeRectangle="88, 181, 50, 40" FullSelectorArgument="&lt;webctrl id='chartsTab' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='chartsTab' tag='A' type='' aaname='' /&gt;" Guid="ccc18cdf-ae60-4a01-b5f1-b643a2167956" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAsCAYAAAAuCEsgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVGhD7c/BDcMgEETR9EQ5tANFUBnlEHGNV1qFkeVM9C29C+PD/lcpZf0jwtwQ5oYwN4S5IcwNYXcYY6zo2+/R/98g7A6EHSDsRGttzTkv9vvebcOywwk7QNgJwj6+x8Nqrav3frHf924bph6e7QrCIurh2a4gLKIenu0KwiLq4dmuICyiHp7tCinslxHmhjA3hLkhzA1hXsp6A1rIYnhxW76PAAAAAElFTkSuQmCC" InformativeScreenshot="945e28372a2d637b8e012a6acbbdf8e5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)]-----[u(ctrl)][u(hk)]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" OutImage="[Image]" OutUiElement="[URL3Screenshot]" ScopeIdentifier="8f895217-8162-4a5e-8aeb-771948d59c1f" Version="V1">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.crimemapping.com/map/location/28208,%20Biddleville,%20Charlotte,%20NC,%20USA?id=" DesignTimeRectangle="0, 0, 1296, 648" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='svg' /&gt;" Guid="62932320-9073-44e2-892a-8caa58b5d050" ImageBase64="" InformativeScreenshot="0d7208f03766462a961fc585569d5a8d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NTakeScreenshot.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTakeScreenshot>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][d(ctrl)]+++++[u(ctrl)][u(hk)]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+            </Sequence>
+            <Sequence DisplayName="Step.8 Sending email" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uma:Office365ApplicationScope ApplicationId="{x:Null}" ApplicationSecret="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Tenant="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" Services="Mail">
+                <uma:Office365ApplicationScope.Body>
+                  <ActivityAction x:TypeArguments="mg:GraphServiceClient">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:String[]">[FileDirectory]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:String[]">[System.IO.Directory.GetFiles("C:\Users\N.Lakshminarayanan\Documents\UiPath\Project1_RoboticEnterpriseFramework\Data\Output")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Sequence DisplayName="Sending_Mail" sap:VirtualizedContainerService.HintSize="262,145" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <umam:SendMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" ReplyTo="{x:Null}" AttachmentsCollection="[FileDirectory]" Body="[MailBody]" DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendMail_1" Importance="Normal" IsBodyHTML="False" IsDraft="False" Subject="[MailSubject]" To="[ToMail]">
+                          <umam:SendMail.Attachments>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </umam:SendMail.Attachments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </umam:SendMail>
+                      </Sequence>
+                    </Sequence>
+                  </ActivityAction>
+                </uma:Office365ApplicationScope.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uma:Office365ApplicationScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1296, 648" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJOSURBVDhPbZJLaFNREIZva90VHyitko1SCYiLikTQLERbVy5EdCMqQkFUCmrVVtuqC9NFRSgi4isPi5WgxS6Uok0lgqhd1CgBL0o1CzcSNYgPUJs0j8+Ze3JbqRmYc+fO+f//nDkzltUF6nNOQVW7xG2wMAAbQ7Bn0LjGmtM9xSjW5TkCTuIoNJwvERzP8+lngdmW+QU3XirGYKdFXPLOaJFsvuSAdXU9X5yJ1abkf9ftf0SsY9AcNNvpdJpQpJ9YbJRcLov9GSanDLkoSzYPb744UDZLWcq1rPYiyQwkE2PUzlvAWp+PRYvrGIpG2H4Hjg/PlNP7BDZcMfGzD0I+Kb6yT+4k5l+/jkBAXkrs2/cfcuwfdkQFcAAGX8OjlMStsKXfgfBbbrbqguT810zC6/USj8edOJc3pzaHYesArLkEy85ByxBskqurFaQk/1URqO/JOzW2HtxPY+NqbNvmejBMyh6nSQSO3CuS+gqJj3B5DHwXjYB2xdMrAlZbiZuvNDXJ7r0teDweljes4PnjB+wbhu7YzBuEErDtlokjL4QsnbCsE1AnpU9kTCdy0rdiycTlj9OBnOhoS9XeyY2Uo1yruluWDlgSKPFwwpymAoVCGS2mAq7YqDzm0h7DqXbmQKZJRapETce0KVzirm3ASlRXu/9WRlreRDGKdQ52R9kVcYR0OA7BQNIQ1UbeS07r1ekr41zetIDrc0/LVwak/qx5aa3dq/MvV3b2ZuH/E1Cv0doOQ+cI9D01cU0lsnrFpHon1App/hkTV8R0wV8PowlX2l1sPwAAAABJRU5ErkJggg==" InformativeScreenshot="59813c635a56a4adbc31115a6c761fa2.png" Selector="&lt;html app='msedge.exe' title='CrimeMapping.com - Helping You Build a Safer Community'/&gt;" Url="[URL3]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

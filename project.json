@@ -4,6 +4,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "ScrollActivity": "[1.0.2]",
+    "UiPath": "[22.4.38.42025]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.MicrosoftOffice365.Activities": "[1.11.1]",
     "UiPath.System.Activities": "[21.10.3]",
