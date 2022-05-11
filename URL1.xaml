@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="OpenUrl" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="676,439" sap2010:WorkflowViewState.IdRef="OpenUrl_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenUrl" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="704,1478" sap2010:WorkflowViewState.IdRef="OpenUrl_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="34">
+    <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -35,10 +35,11 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>ScrollActivity</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -62,41 +63,54 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>ScrollActivity</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OpenUrl1" sap:VirtualizedContainerService.HintSize="476,374" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OpenUrl1" sap:VirtualizedContainerService.HintSize="714,1373" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="www.crimereports.com" Name="Url1" />
-      <Variable x:TypeArguments="x:String" Default="Gainesville Florists, 98 NE 3rd St, Gainesville, FL, 32601, USA" Name="Address" />
+      <Variable x:TypeArguments="x:String" Default="4711 S Michigan Ave" Name="Address" />
+      <Variable x:TypeArguments="ui:UiElement" Name="Screenshot" />
+      <Variable x:TypeArguments="ui:Image" Name="Image" />
+      <Variable x:TypeArguments="x:String" Name="PastDate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: CityProtect" sap:VirtualizedContainerService.HintSize="434,282" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: CityProtect" sap:VirtualizedContainerService.HintSize="672,1281" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="638,1065" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Step 1 checking for Pop ups" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Step 1 checking for Pop ups" sap:VirtualizedContainerService.HintSize="596,547" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:CommentOut DisplayName="Use it" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut DisplayName="Use it" sap:VirtualizedContainerService.HintSize="554,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="596,143" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,12 +151,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <uix:NCheckState Exists="{x:Null}" DisplayName="Step 1.2 Close the &quot;Your safety&quot; pop up" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Step 1.2 Close the &quot;Your safety&quot; pop up" sap:VirtualizedContainerService.HintSize="554,300" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NClick ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
@@ -172,31 +187,32 @@
                 </uix:NCheckState.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
+              <Delay DisplayName="Delay 2s" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="554,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
             </Sequence>
-            <Sequence DisplayName="Step 2 Entering the Address" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="Step 2 Entering the Address" sap:VirtualizedContainerService.HintSize="596,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
+              <uix:NClick ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/agencies?toDate=2022-04-26T23:59:59.999Z&amp;fromDate=2022-04-23T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=5&amp;latitude=36.8231065&amp;longitude=-95.8455374&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="1191, 140, 44, 44" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='mapMainContainer' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mapMainContainer' tag='SPAN' type='' aaname='' /&gt;" Guid="ee2a4cb6-0491-4915-a818-965f77b701c8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUZSURBVFhH1Znbb9tkGIfzD2z9B3YPagXSbpB2xQ2i0y6QQFp3M2kcdjFOuyggNAHiICooEu22jo2LSuNQJpA6FoluSrXRpafUidOkhzhHO45dO25OPW/Abn58r1dPZf6yJu1UvEmPbH/vz8mzN58/26pPr0YgV6eQrUwhv8T2rUmkzAnoy7PQq7NQrBjKGzlolRnU7uZg1GagVmMw1xJQKhHkqyKsOwlYG0kU11NYWEnAWI4zZm1ojPLa0gzkchjp4jiMNfbZK3GotahNcWMe5vqcPVZYmobKUNjnyuzzCaUWfoBPNkOQzFEkmahciaJQiiFpsGNjgn3RHMrreSxUM1CMORhVCYVF9sVW2JZRFplwSbT35aKIrCFCLdG4gPRCCLHMLaTNMGK5ILLsnJQ5zqQFSPokMtYUpIVx5EqC/V3EXCFoj6cXmUtVsAVpP1WcRNoKMabgy1rTyOgTMAzDk+i6DlmW4fzzKeUMZDPKDXsBTdOQSCQ2dZlw1lKQUmPcsBdQVRXxeHxTlwlr1TwSGW8Lx2KxTV0mrBclJLPT3LAXcAmr+jSkbIgb9gIuYSk/ASn/BAkLyQCi6dvcsBdwCRfYQj6fe4KEFXaHmkkHuWEv4O7w4jxbJdjtlRNuhP7+fnR0dKCtrQ0+n8/e0jGN8/LN4hIu19itL5/khh+FJEk4fPiwLVkPqlOOd36juIRrKyVk5RQ3XA+SaGlpsaX279+Pnp4eDA8P2zXa0jGNU51yu5F2CS+tlpHKsEdCTrge7e3ttsyhQ4fqytA41Z1O8zKN4BJe3WAdzjUuTHPT6ex2naO60+mdzmmX8PpfJSj5xoU7OzttAfrZefWHoRzljx49yq1vh0t4eaWMZGqeG+bh/MzOnN0OylGeVg9efTtcwiurFSbM3iY4YR4HDhywBXi1elC+2XMc3BfdcgnjE43f6Xba4dbWVm59OzhTogJZSXPDPDwwhysoaAo3zMNZJRpZX6nurNePbZVYW1+CKE5xw/Vodh2mLS/TCJyLrgpNz3PD9di6vlIHe3t7H8xp2tKx01mCso3O+YfhXHRlNticMEHSTqfrQZ3dt2+fvU//gZ1Iu4Tv3v0bmUyOG24Empt0QdEqQGK0pWNnzpLk1l+jWWn3lFhbbvpZoll2I+0WXq9iNhHhhh8nO5V2Cd+5t4pEam9e83cize1wuomntd2yVbqR5c4lbC5qyDX5AL9bSPpRa/hWXMJFS4OibH/i/4VLuFBII5EIc8NewCV8758NiJERbtgLuIRX12rQtObfmvcKl/CFixdhmM3fmvcKl/DbnV+ioGvcsBdwCX97JYvBwBM0JQ6eFHDs4zFu2AtwhZ85HuCGvUAd4eafU/cKEv7PH2UOngzj2RMjaD12DU+/MoCnXv4Jzx3/BZ+cG8LZy3/AHxTgnxBxTRDRNeDHkXfO4MgHZ/Hiu1146fRn6Pz6Err6fsbr73fhxJluvPlNP94404P+wSCu3gjh3IUf0ff9APx/RnDJP4KOD7+CfyiEru8G8NpH3Tj1eS/O/+DHUEBA4JaAa9dHcCtwEzeuDyNwc4xdX0F09/+KU1/04dVPz8H3wntxPH/6vjR1mqaHw1vdAn67mUYoXUBYsWxGJQNRQcbYyAx+v3IDg5evYnRoFEIwjnnJRDxnIcpyMbWI6cICRPY2M62pmNWLiBcsiDkDMVafzFu4rVsY0yxEVAtxmdWVBURVHePyfURWjzEiWRNixsRs3sK/bNNtSkh3/egAAAAASUVORK5CYII=" InformativeScreenshot="005f381dfd06be6ffdf6e9f927eb1b10.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image" />
                 </uix:NClick.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NClick>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SPAN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Text="[Address+&quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'SPAN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Text="[Address+&quot;[k(enter)]&quot;]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/agencies?toDate=2022-04-26T23:59:59.999Z&amp;fromDate=2022-04-23T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=5&amp;latitude=36.8231065&amp;longitude=-95.8455374&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="893, 142, 260, 40" ElementType="InputBox" FriendlyName="'INPUT 180660eddfa-widge…'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='To search by *' /&gt;" Guid="aa87c6d3-73a4-42c9-93cf-fbeafedfc8ef" ImageBase64="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" InformativeScreenshot="ae62931e16f302df5bb35d68924f7bab.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image">
                     <uix:TargetAnchorable.Anchors>
@@ -208,13 +224,13 @@
                 </uix:NTypeInto.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NTypeInto>
             </Sequence>
-            <Sequence DisplayName="Step 3 Click on Incidents" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Step 3 Click on Incidents" sap:VirtualizedContainerService.HintSize="596,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -226,6 +242,58 @@
                   <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/agencies?toDate=2022-04-26T23:59:59.999Z&amp;fromDate=2022-04-23T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=18&amp;latitude=29.65301700496815&amp;longitude=-82.32180699999999&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="118, 178, 85, 40" ElementType="Button" FriendlyName="'Incidents'" FullSelectorArgument="&lt;webctrl id='incidentsTab' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='incidentsTab' tag='BUTTON' type='' aaname='Incidents' check:text='Incidents' /&gt;" Guid="e49aff8a-be2e-4408-95ae-7ddef8a48d26" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFkAAAAsCAYAAAAO5BTdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALXSURBVGhD7ZY9j6MwEIbzD/kJlCkpka5xmZKSkhLpGkqXlC5dunS1oqSkfG8w5ivJ3u2SMNqT5pGQcGwm9mN77AuE0xHJDIhkBkQyAyKZAZHMgEhmQCQzIJIZEMkMiGQGRDIDIpkBkcyASGZAJDPwguQe5pYgSRr4+MtreDQJxWs+j+abd/4fHz9I8oDOObhuiOVH3i/ZQ2cJ/jKvb+EHSf43b5fcGxS0e/4ryZOEGsZWUFd6TzOoxtEaXRm8RpFfqV2Cq6pgulhBUe7ThdcFsnSKU7Qd7IPkYW2TXKHKdlMX49UGtlK40nuaKTRu6k1vbqEP6zPH3cZMkVEfbR8qDnOC5AQ5DdY6i7bMQ7kwUTMJzu/r0xI2VO8lD7ZEum07igoD3/4ffX+9QRtKM7ZFmZPIwlDPQu0UL8lRtnapT5ICoTu9hyOZoX+avnddWAx9q9ZvnEGtUiSqjTGPccpKnsuAQ7UR5yp6z/SmnkQohSpY3koeYMvHtmP+XP5vsCipfWlD5YSvqV6hDUbmlbxGoA5Q/SY9+GZfJsIYlMaywYZumYCjnCB5LS8DDaOI7beD3rFv2yp6v82rciJM0hw/Cnr2TNK28SL3Up9IHneboh0zppaiamF8/5LgkR8rObTdSY6r+05yTbtgGPbPxEHJI0MPb1rUpQq5eU1Bx2CU/DxdaEoXtZve17ZRaFpTwpm5Sxd0M7hRe6WXjQ10FlrreFAdkUyHXquh7SZmSEGUx1+wzCr5OwcfXP1w8Ck1HqRrfFfRoZRSTo8HWzUeUvk8iV+RrJFRWTVmybtej32KMenga8aYu8n+PrySie9c4ToTr4Lj9Wy8CgZJ2/jTdSuf29CE+CWBfkEyjWG+3iXpHHcbc7rCrX08xguSha8ikhkQyQyIZAZEMgMimQGRzIBIZkAkMyCSGRDJDIhkBi6XX7/jq3AWIpkBkczA5ePjA/Kc+8jBdzrAHxt+OT11X1mxAAAAAElFTkSuQmCC" InformativeScreenshot="8cc9d1bf054330f05080d51977420b02.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image" />
                 </uix:NClick.Target>
               </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.4 Select date" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Filters'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/incidents?toDate=2022-05-02T23:59:59.999Z&amp;fromDate=2022-04-29T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=18&amp;latitude=29.65301700496815&amp;longitude=-82.32180699999999&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="8, 142, 67, 18" FriendlyName="'Filters'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;ce-root&amp;gt;ce-default-layout&amp;gt;div&amp;gt;section&amp;gt;main&amp;gt;ce-explore-crime-map&amp;gt;div&amp;gt;div&amp;gt;ce-list&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='mapPage' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname='' parentid='mapPage' tag='DIV' check:text='Filters' /&gt;" Guid="4f74cce2-3fed-4277-9cae-cb5b7ccfe532" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEcAAAAWCAYAAACSYoFNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJwSURBVFhH7Za/ayJREMf9L1Je6Z9geWX+BEvLLS0DV1hcEeEKBRuLK7awWIgLZkHYCIGNsLAJeMgWQRYuiBAUj+Mky4FcEL73fsyuK76EZONpOPYLD5x580bexzcz5iIh05YITQZHJUKTwVGJ0GRwVCI0GRyVCE0aOHMYtTPkPqnWJTwW4bWkXb1NxlswfnCbNB2gbrjwQrLfkQjNW+CYKOoOu2ByDTBmEeNradvTZPwmnPGFtQ3snYjQvAXOSy+mil/C0V+TY78iNP8GzvNlNUJ1oxTZqnmY8S38hNe2kCd/odHHMFyJnY08k+9o1kwciXMrLHwHpc/yzFGlg/LVmOFPL0JzCDj3sI0eiuIyVJoXARb4Ta/pDPlaD3XdwgcOKQa3zlNqmCJO7E1dHPPPFQtlnrcic5z46fEQmt02ZAnjJQ1Z4Ysu+XVIv/oKo/MOizFRv+P2+nsLrRGDSbq9FD7t+kHa4Qg663dNfy7tFCI0u23IsgGnhOP3xBnVKl7xi67hRD+CUDiERq8lf9pF+dyD9+sPbaYToTlEWXFt+5bfbHEm98XeAM6XHvB38gQcrscZhq6Lk6aFggBlohoctKx2CwcTFx85nMZNXDLLwBNwjICXjBrOzO+zmD6cKE84gMbzsNJLK0KzDzjR2JbTR/7pm6PT4L5kQ17Absq4qCHLqdWFTWdUcHDnoMDj2JTSWj1opzLmuHtPAa8XodkHHIZn4qFEfaEakC/ox5OFvxYxkR7ncNpdKg0O04ET948n4PBRHrgxlFzFRKmdaNgpRGjSwPn/RWgyOCoRmgyOSoQmg6MSocngqERoMjjbAv4Cy7tNm/CKpIYAAAAASUVORK5CYII=" InformativeScreenshot="7c210803986676886d99390e52d7d7ea.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[PastDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[DateTime.Now.AddMonths(-6).ToString(“MM/dd/yyyy”)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[PastDate]" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'Custom date range'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[PastDate]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/filters?toDate=2022-05-02T23:59:59.999Z&amp;fromDate=2022-04-29T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=18&amp;latitude=29.65301700496815&amp;longitude=-82.32180699999999&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="68, 331, 123, 21" ElementType="Text" FriendlyName="'Custom date range'" FullSelectorArgument="&lt;webctrl aaname='Custom date range' parentid='dateRange' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Custom date range' parentid='dateRange' tag='SPAN' type='' check:text='Custom date range' /&gt;" Guid="bae92fec-c4f5-4252-b496-fdb16c38d934" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAZCAYAAAAYEPFUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAToSURBVGhD7Virlqw6ED1/widEIlu2RLZEIiORSD4BiUQikUgkEtkSiUTW2ZUX4dEzPefOuvfOgb0WgoRUqmon9eAXXTgtLvJPjIv8E+Mi/8S4yD8xLvJPjD35U0eljCgMAgqCkCJZUjeZub8EfQHbit68nRdr8seGpBAkq57GGe/zSF0RkxCSmm87AB1lQUH/peu/Rv5I9SP5Rvv/P1iR3+WCRNaZN4uZGhmQyLfjf4ixpsePIp8P619PPhsZ0I57xjRQNxjrp4aSrTP6goKkITs09yXJm0DaCCiMJFWDHp+aRI25xxHwpCaLdaoRN5JFh/tm0VOB8aIdqEpCrBN0kxUN80x9mag14rbssQd/J+kmIDuMKWue1G7IfzYZxUZfllX2HPYAtot1ss8rG+OMIPYQymas61vsEQaUWMc9G8riGwmWyzaXPTTV0GsqalkvrFHzGwN3OndPGjD2cHZ5diN9x1kDL6+xkG9JXbx+jM/In1tKMV+ZwzK2OUUix9EyUA71b/5MbSronkI5lWoGqiXenRGa/FDWIByvc0dFBINDSbUeoKGCs+4lHfGvHBmlIEd/+2xS6AOHWPlDSXekNS3L6Buk1OrXY3uHgqIop1bnxr2NHtT+IiRZD+7gQACVd6RXjKltxpZy2JSaTfUliShvRzU/D7VKxy74woecimvj4xmXs0pwsMqWesPfUEQU5a1L320e7aL3Qj7Ccbw18gifka/Cer4O67ilDlvyIU9u5SkZlgBNfu4JHM1tckuOdFIYqYFTZOPtr3K4Rz7c68/a/dz0TjYf1oUojaMxDUXko/YimYbvEoafivTNb1Zr+hwHvjDHm8m/47A5GZNKzffSzKsL6B1gxsHY9998drgMEYpiSsuGWpsuLLbkb98VesqDB9VKlw0ZgHWOk/yS/P1axjrnIzxWKSURpxQOkfp5TT7f2uU7/3Eh3cNOV4O5ryhNbFdlng35/pptnfKsEdK9tSHShIt8HM28ueVZ+8jL+ezwFzl/7L+U8xXGATmrpDTGQZDeKX6T/OJfIn+sY6SFHGlhwm1EFMANYT+4NQfkF0gbOa6Q/t57zBc+DslXURZhHYXCZNa2uNlvkw+d5KNAC67X7oC0JBB9W6uX9/jwyH9V7SOkIHQKb+Odo7tsUZaLQ5VfLTjMCrIRa0f2kbyDsO/IAN4nX+u+vpE6FWhH6nC5nteXwO23k61D/EOfTIcBB705KDqOiJwauSf3q+SrQm55VoWqCvH28lgM1CAS+yquyNdCP+vzddiLUZ2qoamnMo3pYZXlU+0VI9NQrZ2nyPeLI13wcXT4qOBzr8D75POU1Pp7BZ+MH86RfcF722ISXUcuKUZN4PYzsleO5ILPs1EXfMf/Qo6IZB/ogs3qlK90+pR8+FQqfy03ekQ3cfeKTi74lF1KiCn4sMaXuSafsfvDV6CqNXMWqk3ROZLbnLaHgzxlVRtkciifyKJbeY5Ks9YZY1o91ZagreG2ZFnxz8hnDJVpeUzLNHOkcgJRKUvdcumWDbogMiz7cXQwLdnWxi+0elvVnE6m/Xzyd2bTj8nXl8/3h4bushYffKXVu/BDYNKwrNDW4dbz0DzRgAJQxPuu4iNc5P9EcHrKEor4BxBHJI6WKQ6DOgnv4yL/xLjIPzEu8k+Mi/wT4yL/xLjIPy2IfgMSGkDXNxRGvQAAAABJRU5ErkJggg==" InformativeScreenshot="820755dbf56f3b8aea7a2c903d85e1d7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'See results'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/filters?toDate=2022-05-02T23:59:59.999Z&amp;fromDate=2022-04-29T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=18&amp;latitude=29.65301700496815&amp;longitude=-82.32180699999999&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom" DesignTimeRectangle="133, 594, 99, 32" ElementType="Button" FriendlyName="'See results'" FullSelectorArgument="&lt;webctrl aaname='See results' parentid='filtersPanel' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='See results' parentid='filtersPanel' tag='BUTTON' type='' check:text='See results' /&gt;" Guid="8156d17b-e279-40b0-98ae-36c7d4b18c15" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGcAAAAkCAYAAACUjSQ7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASbSURBVGhD7ZtPaxtHGMb31A/Riz5CDi2kNx19zNHHHnWLyEmngm9qaEGgg0zxwZTa2KURJqImhggWhBKpLUaVQZawnIhKBG8rJWsp3sjIh6fvO7O72pW2SA6baFNm4DHamZ3Z3fc37x+ZlWa9G4N1Zb3D2ytLaPT2SmkFcuzPLJiJ5kC5HI7wxrzE4PUb9AevlVYgtj0zYBbMROM/5uUQP5br+Or7R/j8m5+UVihmwCyYicaUjL//wd3vfsFnD7ag3f9BaYViBsyCmWjsRn91e4Ja0MlKH1/MgploHOdevuwoOBESs2AmGiei8xcvFJwIiVkwEwGnfX6u4ERIzIKZKDgRlIITYSk4EZaCE2GFCie230bTuoHbrBF0vYhYwLmfopJn1/RMr5AMGPsQCg/OThcXxMM02khtFRDPlZA+HWGMGzSrheA5n5iC4KQ7NzDPnvnOC0uhwUnwjU8MpH39u9gbELFB+3/hPfNwCjig54s8HHHj6GNzI3jcVe4E+mAa+tjTEt45i8ZdtdCk8Wa9gZolzsS26N9F4tikI7tNOLQeTufNrj/oImmvv21Qh9Gannv/GXRau1mVx3448vrTdg09T/0bJewZbAvZxhbZJOesdzuFBkfLv5IGmVhonnWw+fgI8Tmjyoc1Ow0kcodY22+gQsfjTnXJca9s45DxD+haa7kC7lB/vGpi7PYdIVXn0DrCXlbOy/RozqBDoZfW3/Gvfzs403Gv56yfUgcD2af1c1XyLNoIFDni7pzlFR4c0pre9RcE1Hw7X+9TTx8Z7zxv36JxnyScTt2bz4p4MgQuTov/0TcfhmLZI6znHonPYcDhHOQL4w8PsU45+H3CeqhwXG0UcO9xA096Fu1a2pm9E9EvdlVgkyFp0bj/OnZYsw0ndYKanDDXHAOusWfR8ZgqycppC+kdCYYVBpwYRRAujGDZEST/fmBYHwaORyneSfYDiaLBMpDZLmLdp0MRkhaN+9cOguN40+z8Iu5ld93zYlkd6WoXlQFdT1STMieFAUeIvCVV7kA35Obk8RV6jgwd6DXmbuJrEYPtBxIhivKBHf+F8m3UepQDlhn3KQiOvI9xp+bpKyBzZkIvH9FngnLcQsqToOOUk/j+EvR5Hk4Nlclt4BSQLLeR2Z9uBO2pQYCCPH+xQvMckYhpF1506OHF95wiUtW+/O7j3rx8mPFsQiaDyIS5aNyrIDjOfVyjUi5RQqYdLAoCu5Ii43Fp766/xQlbAuFNJTYSLOhPZTGRJqimB07smECSoTcfOtez4VBB4WxKGSkMuyAoYbM3C3R5hQaHdWf2PwSTazSPS/6QFHYpPQNnuVKaw5ls4yEZ0vGkmTLYpEhwQN7kXiPbQo1gMSDHE5JunvSX0hzORLNMHOQ9nnQLhQpHKVwpOBGWghNhKTgRloITYSk4EZaCE2EpOBGWD456qTBaYhbipULnddwvv/1ZvcgeATEDZiFex3VeZM/+WsIX6T1BTWl1YgbMQrzI7vwEhN3oz/oJfvv9Dzx/XlFagdj2zIBZiJ+AOD+e4gOmxe7Eg5yQlD6e2OZse2bALMzLIf4Fbtnv5oFZLP4AAAAASUVORK5CYII=" InformativeScreenshot="e64c888f6cb9d32a0653a52e67a65c33.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="Step.5 Take Screenshot" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay DisplayName="Delay 5s" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+              <uix:NTakeScreenshot DisplayName="Take Screenshot" FileName="Data\Output\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_2" OutImage="[Image]" OutUiElement="[Screenshot]" ScopeIdentifier="1d2427fe-4ce6-4e08-9f60-01163a6d1c63" Version="V1">
+                <uix:NTakeScreenshot.Target>
+                  <uix:TargetAnchorable BrowserURL="https://cityprotect.com/map/list/incidents?toDate=2022-04-28T23:59:59.999Z&amp;fromDate=2022-04-25T00:00:00.000Z&amp;pageSize=2000&amp;parentIncidentTypeIds=149,150,148,8,97,104,165,98,100,179,178,180,101,99,103,163,168,166,12,161,14,16,15&amp;zoomLevel=16&amp;latitude=29.652072969750233&amp;longitude=-82.31773540671544&amp;days=1,2,3,4,5,6,7&amp;startHour=0&amp;endHour=24&amp;timezone=%2B00:00&amp;relativeDate=custom&amp;id=626a6097ef65528ae038d0f7" DesignTimeRectangle="0, 0, 1296, 648" FullSelectorArgument="&lt;webctrl tag='CANVAS' /&gt;" Guid="9a6a7582-b1c9-4d00-addb-613261b519b5" ImageBase64="" InformativeScreenshot="76b4ddf47251e60058fb06f9e206a985.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CityProtect' /&gt;" SearchSteps="FuzzySelector" />
+                </uix:NTakeScreenshot.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTakeScreenshot>
             </Sequence>
           </Sequence>
         </ActivityAction>
